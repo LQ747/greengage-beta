@@ -1,1 +1,67 @@
-<p>works</p>
+<div class="flex-container" 
+     ngClass.lg="container-padding-lg" 
+     ngClass.md="container-padding-md"
+     ngClass.sm="container-padding-sm" fxLayout="row">
+    
+    <div fxFlex="100" fxLayout="row" class=" example-container component-text" *ngIf="devices">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">{{devices.msg}}</h1>
+            <small>List of all devices registered in Greengage application with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <i class="material-icons header-icon">router</i>
+        </div>
+    </div>
+
+
+    <div fxFlex class="table-div" *ngIf="devices">
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+                <tr>
+                    <th>Device S/N</th>
+                    <th>Status</th>
+                    <th class="view-delete">Sensors</th>
+                    <th>Farm</th>
+                    <th class="view-delete">View</th>
+                    <th class="view-delete">Charts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of devices.devices" >
+                    <td ngClass.sm="td-sm">{{item.deviceName}}</td>
+                    <td ngClass.sm="td-sm" style="color:green;">{{item.status}}</td>
+                    <td ngClass.md="icons-row-md"
+                    ngClass.sm="td-sm icons-row-sm">
+                        <span class="icon-span" *ngIf="item.sensors.Humidity">
+                            <img class="material-imgs" src="/assets/images/sensors/humidity.png" alt="">
+                        </span>
+                        <span class="icon-span" *ngIf="item.sensors.Temperature">
+                            <img class="material-imgs" src="/assets/images/sensors/temperature.png" alt="">
+                        </span>
+                        <span class="icon-span" *ngIf="item.sensors.Co2">
+                                <img class="material-imgs-cloud" src="/assets/images/sensors/co2-cloud.svg" alt="">
+                        </span>
+                        <span class="icon-span" *ngIf="item.sensors.RGB">
+                                <img class="material-imgs" src="/assets/images/sensors/rgb.png" alt="">
+                        </span>
+                        <span class="icon-span" *ngIf="item.sensors.NH3">
+                                <img class="material-imgs" src="/assets/images/sensors/nh3.png" alt="">
+                        </span>
+                       
+                    </td>
+                    <td ngClass.sm="td-sm">{{item.farm}}</td>
+                    <td><button mat-button [routerLink]="['/realdetails', item.id]"><i class="material-icons small-icons">pageview</i></button></td>
+                    <td>
+                        <button mat-button >
+                            <img  [routerLink]="['/measurement', item.id]" class="mat-icon2" src="./assets/images/charts.png">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="center" [hidden]="devices || errMess">
+        <mat-progress-spinner style="margin:0 auto; position:absolute;
+        right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

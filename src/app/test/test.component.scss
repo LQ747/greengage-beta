@@ -1,0 +1,84 @@
+.logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 50px;
+}
+
+.logo-size{
+    height: 125px;
+}
+
+.menuButton{
+    color: black;
+}
+
+.mat-button-logout{
+    background-color: #4C9D2A;
+    border-radius: 5px;
+    color: white !important;    
+}
+
+.logout-button-div{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-icons{
+    color: white;
+    background-color: #4C9D2A;
+    padding: 4px;
+    font-size: 55px;
+    border-radius:5px; 
+}
+
+.user-img{
+    background-color: #4C9D2A;
+    padding: 4px;
+    border-radius:5px;
+    height: 55px;
+    width: 55px; 
+}
+
+.user-img2{
+    background-color: #4C9D2A;
+    padding: 7px;
+    border-radius:5px;
+    height: 49px;
+    width: 49px; 
+}
+
+.user-icon-div{
+    text-align: center;
+}
+.user-icon-div p{
+    color: #6a6c6f;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mat-button{
+    padding: 0 !important;
+}
+
+.logout-icon{
+    font-size: 63px;
+    color: #4C9D2A;
+}
+
+////////////////////////////////////////////////////// lg ///////////////////////////////////////////////
+.logout-button-lg{
+    width: 22%;
+}
+
+///////////////////////////////////////////////////// md ///////////////////////////////////////
+.logout-button-md{
+    width: 32%;
+}
+
+//////////////////////////////////////////////////  sm //////////////////////// 
+
+.logout-button-sm{
+    width: 40%;
+}
+

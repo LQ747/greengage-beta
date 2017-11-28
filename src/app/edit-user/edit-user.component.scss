@@ -1,0 +1,179 @@
+.full-width {
+    width: 97%;
+}
+
+.full-width-sm {
+    width: 100% !important;
+}
+
+.half-width {
+    width: 45%
+}
+
+.mat-dialog-title{
+    color: white;
+    background-color: #4C9D2A;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.icon-margin{
+    margin-top: 23px;
+}
+
+.margin{
+    margin-bottom: 23px;
+}
+
+.material-icons{
+    font-size: 30px;
+}
+
+.mat-dialog-content{
+    max-height: 100% !important;
+    margin: 0 !important;
+}
+
+
+.form-icons-div{
+    padding-top: 5px;
+}
+
+
+::ng-deep .mat-form-field-underline{
+    background-color: #6a6c6f !important;
+}
+
+
+// .mat-option /deep/ .mat-option-text{
+//     font-size: 1.3vw;
+// }
+
+// .mat-form-field /deep/ .mat-form-field-flex {
+//     width: 75%;
+// }
+
+// .mat-form-field /deep/ .mat-form-field-underline {
+//     width: 75%;
+// }
+.editform-text{
+    font-size: 14px;
+    color: #6a6c6f;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+.form-dimension{
+    padding-top: 25px;
+    padding-left: 35px;  
+}
+
+.icon-margin{
+    margin-right: 10px;
+}
+
+.icon2-margin{
+    margin-left: 22px;
+}
+
+.small-icons{
+    margin-right: 13px !important;
+}
+
+
+.my-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.message-icon{
+    margin-top: 8px;
+}
+
+.message-div{
+    width: 84%;
+}
+/////////////////////////////////////////////////////////////////////////////////////// lg ////////////////////////////////////////////////////////////////////////
+
+.message-width-lg{
+    width: 95%;
+}
+
+.form-dimensions-lg{
+    height: 33vw;
+}
+
+
+.login-form-lg{
+    height: 41.59375vw;
+    width: 66.125vw;
+}
+
+.form-icons-div-lg{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+.half-width-lg{ 
+    width: 41% 
+} 
+
+.form-option3{
+    margin-right: 17px;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////// md ////////////////////////////////////////////////////////////////////////
+
+.form-dimensions-md{
+    height: 47vw; 
+}
+
+.login-form-md{
+    height: 57.59375vw;
+    width: 79.125vw;
+}
+
+.input-margin-md{
+    margin-left: 35px; 
+}
+
+.message-width-md{
+    width: 90%;
+}
+
+.half-width-md { 
+    width: 40% 
+} 
+
+/////////////////////////////////////////////////////////////////////////////////////// sm ////////////////////////////////////////////////////////////////////////
+
+.form-dimensions-sm{
+    width: 80vw;
+    height: 65vw;
+}
+
+.mat-dialog-title-sm{
+    font-size: 2.81vw;
+}
+
+.login-form-sm{
+    height: 76.59375vw;
+    width: 80vw;
+}
+
+.input-margin-sm{
+    margin-left: 30px !important; 
+}
+
+.message-width-sm{
+    width: 83%;
+}
+
+.half-width-sm { 
+    width: 39% 
+}

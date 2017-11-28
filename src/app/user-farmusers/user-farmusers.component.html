@@ -1,0 +1,41 @@
+<div class="flex-container"
+ ngClass.lg="container-padding-lg"
+ ngClass.md="container-padding-sm"
+ ngClass.sm="container-padding-sm" fxLayout="row">
+
+<!-- Header -->
+<div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="users">
+<div fxFlex="73" class="example-header">
+   <h1 class="farmName">{{users.msg}}</h1>
+   <small>List of all Users registered in Green company with basic details.</small>
+</div>
+<div fxFlex fxLayoutAlign="end end">
+   <i class="material-icons header-icon">people</i>
+</div>
+</div>
+
+<div fxFlex="100" class="table-div" *ngIf="users">
+<table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+ <thead>
+   <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Phone Number</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr *ngFor="let user of users.users">
+     <td>{{user.name}}</td>
+     <td>{{user.email}}</td>
+     <td>+3815468335732</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+<button mat-button class="back-button" (click)="goBack()" *ngIf="users">BACK</button>
+</div>
+
+<div class="center" [hidden]="users || errMess">
+<mat-progress-spinner style="margin:0 auto; position:absolute;
+   right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

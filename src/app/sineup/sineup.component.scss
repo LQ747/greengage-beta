@@ -1,0 +1,53 @@
+::ng-deep .mat-input-placeholder {
+    color: rgb(10, 10, 10);
+    //font-size: 2em;
+}
+
+::ng-deep .mat-slide-toggle-content{
+    color: black;
+}
+
+.sminka{
+    border: 1px solid #c5c5c5;
+    border-bottom: none;
+    background: #A2D45C;
+    margin: 10px;
+    color: black;
+}
+.profil-header{
+    height: 76px;
+    border-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.flex-container{
+    flex-wrap: wrap;
+    //background:#A2D45C;
+    //padding: 40px;
+}
+
+.sminka1{
+    border: 1px solid #e4e5e7;
+    border-radius: 2px;
+    background: #f6f6f6;
+    color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left:20px;
+}
+
+.full-width{
+    width: 100%;
+}
+.half-width{
+    width: 45%;
+}
+
+.form-size{
+   width: 45%;
+    
+}

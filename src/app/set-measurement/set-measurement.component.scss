@@ -1,0 +1,152 @@
+.full-width {
+    width: 95%
+}
+
+.half-width {
+    width: 55%
+}
+
+.mat-dialog-title{
+    color: white;
+    background-color: #4C9D2A;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.mat-dialog-title h2{
+    margin: 1vw !important;
+}
+
+.mat-dialog-content{
+    margin: 0px 4px !important;
+}
+
+.form-option1{
+    padding-top: 10px;
+    // margin-right: 3vw;
+}
+.form-option2{
+    padding-top: 0;
+}
+
+.form-option3{
+    padding-top: 1vw;
+    // margin-right: 3vw;
+}
+
+.mat-dialog-content{
+    margin: 0 !important;
+}
+
+.img-fit-content{
+    height: fit-content;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////// lg ////////////////////////////////////////////////////////////////////////
+
+.form-dimensions-lg{
+    width: 48vw;
+    height: 27vw;
+}
+
+.login-form-lg{
+    height: 35.59375vw;
+    width: 50.125vw;
+}
+
+.mat-dialog-actions-lg{
+    padding-top: 3vw;
+}
+
+.temp-width-lg{
+    width: 81%;
+    margin-left: 1.8vw;
+}
+
+.options-lg{
+    margin-top: 1.5vw;
+}
+
+.header-icon-lg{
+    margin-top: 1.25vw;
+    font-size: 2.1vw;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////// md ////////////////////////////////////////////////////////////////////////
+
+.form-dimensions-md{
+    width: 78vw;
+    height: 39vw; 
+}
+
+.login-form-md{
+    height: 50.59375vw;
+    width: 69.125vw;
+}
+
+.mat-dialog-actions-md{
+    padding-top: 8vw;
+}
+
+.temp-width-md{
+    width: 62%;
+    margin-left: 1.8vw;
+}
+
+.options-md{
+    margin-top: 1.5vw;
+}
+
+.header-icon-md{
+    margin-top: 1.45vw;
+    font-size: 3vw;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////// sm ////////////////////////////////////////////////////////////////////////
+
+.form-icons-div-sm{
+    padding-top: 14px;
+}
+
+.form-dimensions-sm{
+    height: 50vw;
+    width: 80vw;
+    padding-right: 0;
+    padding-left: 1vw;
+    padding-top: 2vw;
+}
+
+.mat-dialog-title-sm{
+    font-size: 2.81vw;
+}
+
+.login-form-sm{
+    height: 67.59375vw;
+    width: 80.125vw;
+}
+
+.mat-dialog-actions-sm{
+    padding-top: 8vw;
+}
+
+// .select-sm{
+//     width: 50%
+// }
+
+.temp-width-sm{
+    width: 81%;
+    margin-left: 1.8vw;
+}
+
+.options-sm{
+    margin-top: 2vw;
+}
+
+.header-icon-sm{
+    margin-top: 1.75vw;
+}

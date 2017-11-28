@@ -1,2 +1,69 @@
-<h1>All Clients</h1>
-<app-mat-table></app-mat-table>
+<div class="flex-container" fxLayout="row"
+     ngClass.lg="container-padding-lg"
+     ngClass.md="container-padding-sm"
+     ngClass.sm="container-padding-sm">
+
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="companyData">
+        <div fxFlex="73" class="example-header flex-container">
+
+            <div fxFlex>
+                    <h2 class="farmName">{{companyData.msg}}</h2>
+            </div>
+
+            <div fxFlex.lg="68" fxFlex.md="68" fxFlex.sm="58" class="create-button-div">
+                    <button (click)="openEditForm()" type="submit" mat-button class="background-primary">
+                            <span ngClass.gt-lg="edit-button-lg"
+                            ngClass.lg="edit-button-lg"
+                            ngClass.md="edit-button-md"
+                            ngClass.sm="edit-button-sm">Create New</span>
+                         </button>
+            </div>
+
+            <div fxFlex="100">
+                    <small>List of all companies registered in Greengage application with basic details.</small>
+            </div>
+
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <i class="material-icons header-icon">work</i>
+        </div>
+    </div>
+    
+
+    <div fxFlex class="table-div" *ngIf="companyData">
+            <div class="flex-container">
+                <!-- <div id="new-search-area" fxFlex>
+                </div> -->
+            </div>
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+                <thead ngClass.sm="table-head-sm">
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Company Location</th>       
+                        <th>Email</th>     
+                        <th>Phone</th>
+                        <th class="view-delete nosort" >Number Of Users</th>
+                        <th class="view-delete nosort">Number Of Farms</th>
+                    </tr>
+                </thead>
+                <tbody  >
+                <!-- [routerLink]="['/farmdetails', farm.id]" -->
+                    <tr *ngFor="let company of companyData.companis">
+                        <td ngClass.sm="td-sm">{{company.name}}</td>
+                        <td ngClass.sm="td-sm">{{company.location}}</td>
+                        <td ngClass.sm="td-sm">{{company.email}}</td>
+                        <td ngClass.sm="td-sm">{{company.phone}}</td>
+                        <td ngClass.sm="td-sm" style="color:green;"  [routerLink]="['/compantusers', company.id]"><p>{{company.numberOfUsers}}&ensp;<i class="material-icons border txtCol">people</i></p></td>
+                        <td ngClass.sm="td-sm" style="color:green;"><p>{{company.numberOfFarms}}&ensp;<img [routerLink]="['/companyfarms', company.id]"  class="mat-icon"  src="./assets/images/farm.png">&ensp;<i class="material-icons add-farm" [routerLink]="['/createfarm', company.id]">add_circle</i></p></td>
+                    </tr>
+                </tbody>
+                <!-- <div id="new-pagination">
+                </div> -->
+        </table>
+    </div>
+    
+    <div class="center" [hidden]="companyData || errMess">
+            <mat-progress-spinner style="margin:0 auto; position:absolute;
+            right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+    </div>
+</div>

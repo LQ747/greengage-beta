@@ -1,0 +1,123 @@
+<div class="flex-container" 
+ ngClass.lg="container-lg" 
+ ngClass.md="container-md" 
+ ngClass.md="container-md" 
+ ngClass.sm="container-sm" fxLayout="row">
+
+  <!-- Menu -->
+  <div class="chart-toolbar" fxLayout="row" 
+  ngClass.lg="chart-toolbar-lg" 
+  ngClass.md="chart-toolbar-md" 
+  ngClass.sm="chart-toolbar-sm" fxLayoutAlign="space-around none">
+      
+      <div fxFlex="100">
+        <div fxFlex >
+            <mat-button-toggle checked='true' (click)="changeShowStatus()">
+                <div class="flex-container" fxLayout="row">
+                        <div fxFlex="100" class="chart-icon-div">
+                                <img src="/assets/images/sensors/humidity.png" alt="">
+                        </div>
+                        <div fxFlex="100"
+                        ngClass.lg="chart-mat-slide-text-lg" 
+                        ngClass.md="chart-mat-slide-text-md" 
+                        ngClass.sm="chart-mat-slide-text-sm">
+                            Humidity
+                        </div>
+                </div>
+            </mat-button-toggle>
+            </div>
+
+        <div fxFlex>
+            <mat-button-toggle checked='true' (click)="changeShowCo2()">
+                    <div class="flex-container" fxLayout="row">
+                        <div fxFlex="100" class="chart-icon-div">
+                                <img class="chart-humid" src="/assets/images/sensors/co2-cloud.svg" alt="">
+                        </div>
+                        <div fxFlex="100" ngClass.lg="chart-mat-slide-text-lg" 
+                        ngClass.md="chart-mat-slide-text-md" 
+                        ngClass.sm="chart-mat-slide-text-sm">
+                        CO
+                        <sub>2</sub> 
+                        </div>
+                    </div>
+            </mat-button-toggle>
+        </div>
+
+        <div fxFlex>
+            <mat-button-toggle checked='true' (click)="changeShowTemperature()">
+                <div class="flex-container" fxLayout="row">
+                    <div fxFlex="100" class="chart-icon-div">
+                            <img src="/assets/images/sensors/temperature.png" alt="">
+                    </div>
+                    <div fxFlex="100" ngClass.lg="chart-mat-slide-text-lg" 
+                    ngClass.md="chart-mat-slide-text-md" 
+                    ngClass.sm="chart-mat-slide-text-sm">
+                    Temperature
+                    </div>
+                </div>
+            </mat-button-toggle>
+        </div>
+
+        <div fxFlex>
+            <mat-button-toggle checked='true' (click)="changeShowNH3()">
+                    <div class="flex-container" fxLayout="row">
+                        <div fxFlex="100" class="chart-icon-div">
+                                <img src="/assets/images/sensors/nh3.png" alt="">
+                        </div>
+                        <div fxFlex="100" ngClass.lg="chart-mat-slide-text-lg" 
+                        ngClass.md="chart-mat-slide-text-md" 
+                        ngClass.sm="chart-mat-slide-text-sm">
+                        NH
+                        <sub>3</sub>
+                        </div>
+                    </div>
+            </mat-button-toggle>
+        </div>
+      </div>
+  </div>
+
+  <!-- Charts -->
+  <div fxLayout="column" fxFill>
+      <div class="test">
+          <mat-card class="chart-mat1" [ngStyle]="{'margin-top': margin_top }" *ngIf="showHide">
+              <div style="width: 100%;">
+                  <canvas baseChart height="110" width="700" [chartType]="'line'" [datasets]="chartDataHumidity" [labels]="chartLabels" [options]="humidityOptions"
+                      [legend]="true" [colors]="HumidityColors" (chartClick)="onChartClick($event)">
+                  </canvas>
+              </div>
+          </mat-card>
+      </div>
+      <div class="test">
+          <mat-card class="chart-mat1" [ngStyle]="{'margin-top': margin_top }" *ngIf="showCo2">
+              <div style="width: 100%;">
+                  <canvas baseChart height="110" width="700" [chartType]="'line'" [datasets]="chartDataCo2" [labels]="chartLabels" [options]="co2Options"
+                      [legend]="true" [colors]="Co2Colors" (chartClick)="onChartClick($event)">
+                  </canvas>
+              </div>
+          </mat-card>
+      </div>
+      <div class="test">
+          <mat-card class="chart-mat1" [ngStyle]="{'margin-top': margin_top }" *ngIf="showTemperature">
+              <div style="width: 100%;">
+                  <canvas baseChart height="110" width="700" [chartType]="'line'" [datasets]="chartDataTemp" [labels]="chartLabels" [options]="tempOptions"
+                      [legend]="true" [colors]="TempColors" (chartClick)="onChartClick($event)">
+                  </canvas>
+              </div>
+          </mat-card>
+      </div>
+      <div class="test">
+          <mat-card class="chart-mat1" [ngStyle]="{'margin-top': margin_top }" *ngIf="showNH3">
+              <div style="width: 100%;">
+                  <canvas baseChart height="110" width="700" [chartType]="'line'" [datasets]="chartDataNH3" [labels]="chartLabels" [options]="nh3Options"
+                      [legend]="true" [colors]="NH3Colors" (chartClick)="onChartClick($event)">
+                  </canvas>
+              </div>
+          </mat-card>
+      </div>
+  </div>
+
+  <div fxFlex="100">
+      <button class="chart-back-button" mat-button class="back-button" (click)="goBack()">BACK</button>
+  </div>
+
+</div>

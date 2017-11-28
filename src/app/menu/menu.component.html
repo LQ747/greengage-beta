@@ -1,76 +1,124 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
+<div class="proba">
 
-    <div fxFlex>
-        <div>
-            <h3>Admin Menu</h3>
-            <hr>
-            <div>
 
-                <mat-card class="mainCard" [style.border-bottom]="'2px solid #FFFFFF'">
-                    <mat-grid-list rowHeight="320px" cols="2">
-                        <mat-grid-tile>
-                            <a routerLink="/companies">
-                                <mat-card class="cards">
-                                        <h2 class="cardText">Companies</h2>
-                                    <mat-card-header>
-                                            <img mat-card-avatar src="./assets/images/work.png">                                        
-                                    </mat-card-header>
-                                    <mat-card-content>
-                                        <div class="cardNums">
-                                            <h3>11</h3>
-                                        </div>
-                                    </mat-card-content>
-                                </mat-card>
-                            </a>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <a routerLink="/farms">
-                                <mat-card class="cards">
-                                        <h2 class="cardText">Farms</h2>
-                                    <mat-card-header>
-                                        <img class="cardImg" mat-card-avatar src="./assets/images/store.png" alt="Farms">
-                                    </mat-card-header>
-                                    <mat-card-content>
-                                            <div class="cardNums">
-                                                    <h3>52</h3>
-                                            </div>
-                                    </mat-card-content>
-                                </mat-card>
-                            </a>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <a routerLink="/users">
-                                <mat-card class="cards">
-                                        <h2 class="cardText">Users</h2>
-                                    <mat-card-header>
-                                        <img mat-card-avatar src="./assets/images/routerWhite.png">
-                                    </mat-card-header>
-                                    <mat-card-content>
-                                            <div class="cardNums">
-                                                    <h3>142</h3>
-                                                </div>
-                                    </mat-card-content>
-                                </mat-card>
-                            </a>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <a routerLink="/events">
-                                <mat-card class="cards">
-                                        <h2 class="cardText">Events</h2>
-                                    <mat-card-header>
-                                        <img mat-card-avatar src="./assets/images/eventWhite.png">
-                                    </mat-card-header>
-                                    <mat-card-content>
-                                            <div class="cardNums">
-                                                    <h3>2322</h3>
-                                                </div>
-                                    </mat-card-content>
-                                </mat-card>
-                            </a>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-                </mat-card>
-            </div>
+    <div class="menu-group">
+         <div  class="myflex" *ngIf="companyNumber">
+            <a routerLink="/companies">
+                <div class="proba menu-card" fxLayout="row">
+                        <div fxFlex="100">
+                            <div fxFlex="55" class="titles-div">
+                                <h4 class="cardText">COMPANIES</h4>
+                            </div>
+                            <div fxFlex  class="card-icon">
+                                <i class="material-icons menu-icons">work</i>
+                            </div>
+                        </div>
+                        <div fxFlex="100" class="company-number">
+                            <h1 class="text-success">{{companyNumber}}</h1>
+                        </div>
+                        <div fxFlex="100" class="total-div">
+                            <p>Total Companies</p>
+                        </div>
+                        <div fxFlex="100" class="small-txt">
+                            <p>Total companies in Greengage system. You can view them all by clicking on this link</p>
+                        </div>
+                        <div style="height:20px; width:100%;"></div>
+                        <div fxFlex="100" class="footer-div">
+                            <p> Detail description of every single Company is available on Companies page</p>
+                        </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="myflex" *ngIf="userNumber">
+            <a routerLink="/users">
+                <div class="flex-container menu-card" fxLayout="row">
+                        <div fxFlex="100">
+                            <div fxFlex="55" class="titles-div">
+                                <h4 class="cardText">USERS</h4>
+                            </div>
+                            <div fxFlex  class="card-icon">
+                                <i class="material-icons menu-icons">people</i>
+                            </div>
+                        </div>
+                        <div fxFlex="100" class="company-number">
+                            <h1 class="text-success">{{userNumber}}</h1>
+                        </div>
+                        <div fxFlex="100" class="total-div">
+                            <p>Total Users</p>
+                        </div>
+                        <div fxFlex="100" class="small-txt">
+                            <p>Here are included admins and simple users in all organizations. You can edit / remove users from Users page</p>
+                        </div>
+                        <div style="height:20px; width:100%;"></div>
+                        <div fxFlex="100" class="footer-div footer2-div">
+                            <p> Editing users is available on single user page </p>
+                        </div>
+                </div>
+            </a>
         </div>
     </div>
+    <div>
+        <div class="myflex" *ngIf="eventNumber">
+            <a routerLink="/events">
+                <div class="flex-container menu-card" fxLayout="row">
+                        <div fxFlex="100">
+                            <div fxFlex="55" class="titles-div">
+                                <h4 class="cardText">EVENTS</h4>
+                            </div>
+                            <div fxFlex  class="card-icon">
+                                <i class="material-icons menu-icons">event</i>
+                            </div>
+                        </div>
+                        <div fxFlex="100" class="company-number">
+                            <h1 class="text-success">{{eventNumber}}</h1>
+                        </div>
+                        <div fxFlex="100" class="total-div">
+                            <p>Total Events</p>
+                        </div>
+                        <div fxFlex="100" class="small-txt">
+                            <p>Total number of events, in all modes. You can filter through all events parameters on events page.</p>
+                        </div>
+                        <div style="height:20px; width:100%;"></div>
+                        <div fxFlex="100" class="footer-div">
+                            <p>  Detail stats of every single device is available on Devices page </p>
+                        </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="myflex" *ngIf="farmNumber">
+            <a routerLink="/farms">
+                <div class="flex-container menu-card" fxLayout="row">
+                        <div fxFlex="100">
+                            <div fxFlex="55" class="titles-div">
+                                <h4 class="cardText">FARMS</h4>
+                            </div>
+                            <div class="farm-icon">
+                                <img class="img-avatar" src="./assets/images/farm2.png">
+                            </div>
+                        </div>
+                        <div fxFlex="100" class="company-number">
+                            <h1 class="text-success">{{farmNumber}}</h1>
+                        </div>
+                        <div fxFlex="100" class="total-div">
+                            <p>Total Farms</p>
+                        </div>
+                        <div fxFlex="100" class="small-txt">
+                            <p> Total number of farms. You can filter through all farms parameters on farms page.</p>
+                        </div>
+                        <div style="height:20px; width:100%;"></div>
+                        <div fxFlex="100" class="footer-div">
+                            <p>Adding Farms is available through Companies page</p>
+                        </div>
+                </div>
+            </a>
+        </div>
+    </div> 
+    
+        
+</div>
+<div class="center" [hidden]="userNumber || errorMesUser">
+    <mat-progress-spinner style="margin:0 auto; position:absolute;
+    right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
 </div>

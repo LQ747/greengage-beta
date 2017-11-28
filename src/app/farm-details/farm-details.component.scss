@@ -1,29 +1,437 @@
-mat-card-title{
-    text-align: center;
-}
 .mat-list-icon {
     color: rgba(0, 0, 0, 0.54);
   }
 
-.maps {
-    margin-top:60px;
-    margin-right: 80px; 
+.icon-large{
+    font-size: 30px;
 }
 
-.backButton{
-    margin-top:450px;
-   // margin-left: 20px; 
+.mat-card-header p{
+    margin: auto;
+    margin-left: 2px;
+    font-size: 1em;
+    font-weight: 600;    
+}
+
+.mat-card{
+    // padding: 2.34375vw;
+    padding-top: 0.48828125vw;
+    margin-bottom: 1.46484375vw;
+    border: 1px solid #e4e5e7;
+    border-radius: 2px;
+    background: #f6f6f6;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: none;
+}
+
+
+
+.cards1{
+    background: white;
+    color: #383838;
+    text-align: center;
+    margin-bottom: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 5px;
+}
+
+.numberOf{
+    color: green;
+}
+
+.text-div p {
+    margin-bottom: 0 !important;
+    font-size: 1.86vw;
+}
+
+.info-div{
+    margin-left: 2vw;
+    padding-top: 0.67vw;
+}
+
+.div-aligne{
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+.div-aligne-lg{
+    margin-top: 2.5vw;
+    margin-bottom: 2vw;
+}
+
+.icon{
+    color: #6a6c6f;
+    margin: 0 auto;
+}
+
+.icon-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #e4e5e7;
+}
+
+.map-logo{
+    height: 2.44140625vw;
+}
+
+.map-div{
+    margin-top: 0.46484375vw; 
+}
+
+.temperatura{
+    height: 200px;
+    background-color: black;
+}
+
+.text-div{
+    margin-left: 1vw;
+}
+
+.profil-temp{
+    margin-right: 0px !important;
+    padding-left: 1.953125vw;
+}
+
+.profil-temp p{    
+    margin-top: 1.7578125vw;
+    font-size: 1.85546875vw;
+    line-height: 1.1;
+    font-weight: 300;
+    color: #6a6c6f;
+}
+
+
+.temp-text{
+    font-weight: 500;
+    color: #6a6c6f;
+}
+
+.temp{
+    color: green;
+}
+
+.current-temp{
+    margin-left: 2.4vw;
+    color:green;
+}
+
+
+
+
+
+////////////////// lg
+
+.maps-lg{
+    height: 34vw;
+}
+
+.page-padding-lg{
+    padding: 13.95313vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+}
+
+.example-container-lg{ 
+    padding: 1.2125vw; 
+    border-radius: 0.1953125vw; 
+    margin-bottom: 1.44140625vw;   
+  } 
+
+  .farmName-lg{ 
+    font-size: 2.296875vw; 
+    line-height: 1.1; 
+    font-weight: 400; 
+    margin:0; 
+    margin-bottom: 0.48828125vw; 
+  }
+
+
+.profil-details-icons-lg{
+    margin-left: 0.5vw;
+}
+
+.icon-lg{
+    font-size: 8vw !important;
+}
+
+.temp-text-lg{
+    font-size: 1.25vw;
+    padding-top: 0.3vw;
+    padding-bottom: 1vw;
 
 }
 
-mat-card-header{
-    margin-bottom: 10px;
+.mat-card-avatar-lg{
+    margin-bottom: 0.68359375vw;
+    height: 2.22265625vw !important;
+    width: 2.22265625vw !important;
+    margin-left: 1vw;
+    border-radius: unset;
+    
 }
 
-.farmDetails{
-    margin-left: 30px;
+.info-div-lg{
+    padding-left: 1vw;
+    padding-top: 1.5vw;
+    margin-right: 1vw;
 }
 
-mat-card{
-    border-radius: 20px;
+
+.number-of-lg{
+    margin-top: 12px !important;
+}
+
+.number-of-lg2{
+    padding-top: 0.4vw;
+    margin-top: 0vw !important;
+}
+  .text-div-lg p {
+    font-size: 1.15vw;
+    margin-left: 0.5vw;
+}
+
+.txt-margin-lg{
+    font-size: 1.7vw;
+    color: #6a6c6f;
+    line-height: 1;
+    margin-bottom: 0.3vw;
+}
+
+.current-temp-lg{
+    margin-left: 8.4vw;
+}
+
+.numberOf-lg{
+    font-size: 1.1vw;
+}
+
+.monitoring-lg{
+    padding-left: 1.85vw;
+}
+
+.measurement-lg{
+    padding-left: 2vw;
+
+}
+
+.temp-lg{
+    margin-left: 12vw;
+    margin-top: 1vw !important;
+}
+.temp-lg2{
+    margin-left: 8.3vw;
+    margin-top: 1vw !important;
+}
+
+.alarm-icon-lg{
+    font-size: 3vw;
+}
+
+/////////////// md
+
+
+.mat-card-avatar-md{
+    margin-bottom: 0.359375vw;
+    height: 2.65625vw;
+    width: 2.65625vw;
+    margin-left: 1vw;   
+}
+
+.text-div-md p {
+    margin-bottom: 0 !important;
+    margin-top: 1.4vw;
+    font-size: 1.586vw;
+}
+
+.maps-md{
+    height: 36vw;
+}
+
+.alarm-icon-md{
+    font-size: 3.38vw;    
+}
+
+.page-padding-md{
+    padding: 10vw;
+    padding-top: 2vw;
+}
+
+.example-container-md{ 
+    padding: 1.953125vw; 
+    border-radius: 0.1953125vw; 
+    margin-bottom: 1.44140625vw;   
+  } 
+
+  .farmName-md{ 
+    font-size: 2.9296875vw; 
+    line-height: 1.1; 
+    font-weight: 400; 
+    margin:0; 
+    margin-bottom: 0.48828125vw; 
+  }
+
+
+.profil-details-icons-md{
+    margin-right: 1vw;
+    margin-top: 0.5vw;
+}
+
+.icon-md{
+    font-size: 10vw !important;
+}
+
+.temp-text-md{
+    font-size: 1.8vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+}
+
+
+.info-div-md{
+    padding-left: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-right: 1vw;
+}
+
+
+.number-of-md{
+    margin-top: 1.5vw !important;
+}
+
+.txt-margin-md{
+    font-size: 1.7vw;
+    color: #6a6c6f;
+}
+
+.current-temp-md{
+    margin-left: 6.4vw;
+}
+
+.numberOf-md{
+    font-size: 2vw;
+}
+
+.temp-md{
+    margin-left: 11.74vw;
+    margin-top: 1.3vw;
+}
+
+.temp-md2{
+    margin-left: 6.4vw;
+    margin-top: 1.3vw;
+}
+
+.measurement-md{
+    padding: 1px;
+}
+
+.set-md{
+    flex-wrap: wrap;
+}
+
+
+.measurement-margin{
+    margin-top: 3vw;
+}
+
+
+
+////////////// sm
+
+.maps-sm{
+    height: 58vw;
+}
+
+.alarm-icon-sm{
+    font-size: 3.38vw;    
+}
+
+.page-padding-sm{
+    padding: 1.953125vw;
+}
+
+.example-container-sm{ 
+    padding: 1.953125vw; 
+    border-radius: 0.1953125vw; 
+    margin-bottom: 2.44140625vw;   
+  } 
+
+  .farmName-sm{ 
+    font-size: 2.9296875vw; 
+    line-height: 1.1; 
+    font-weight: 400; 
+    margin:0; 
+    margin-bottom: 0.48828125vw; 
+  }
+
+
+.profil-details-icons-sm{
+    margin-right: 2px;
+    margin-top: 0.5vw;
+}
+
+.icon-sm{
+    font-size: 10vw !important;
+}
+
+.temp-text-sm{
+    font-size: 2.1vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+    padding-top: 1vw;
+}
+
+.mat-card-avatar-sm{
+    margin-bottom: 0.68359375vw;
+    margin-left: 1vw;
+    height: 3.22265625vw;
+    width: 3.22265625vw;   
+}
+
+.info-div-sm{
+    padding-left: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    margin-right: 1vw;
+}
+
+
+.number-of-sm{
+    margin-top: 1.9vw !important;
+}
+
+.txt-margin-sm{
+    font-size: 1.7vw;
+    color: #6a6c6f;
+}
+
+.current-temp-sm{
+    margin-left: 8.4vw;
+}
+
+.numberOf-sm{
+    font-size: 2vw;
+}
+
+.temp-sm{
+    margin-left: 13.82vw;
+    margin-top: 1.3vw !important;
+}
+
+.temp-sm2{
+    margin-left: 7.72vw;
+    margin-top: 1.1vw !important;
+}
+
+.measurement-sm{
+    padding: 1px;
+}
+
+.set-sm{
+    flex-wrap: wrap;
 }

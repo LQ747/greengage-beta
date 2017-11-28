@@ -1,0 +1,145 @@
+
+<!-- <div class="flex-container" fxLayout="row" style="padding: 40px;" fxLayoutAlign="center center" >
+  
+    <div fxFlex="40" class="profil-header sminka" fxLayoutAlign="center center">
+      <h3>Send us your feedback</h3>
+  
+    </div>
+    <div fxFlex="100" style="height: 1px"></div>
+
+
+    <div class="flex-container sminka" style="padding-left:10px;" fxFlex="40" fxLayout="row">
+      
+                  <div fxFlex="50"  fxLayout="column">
+                      <div fxFlex class="input-title">
+                        <p>First name</p>
+                      </div>
+                      <div fxFlex class="title-div">
+                          <mat-input-container class="half-width" 
+                          dividerColor="{{(feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched) ? 'warn' : 'primary'}}">
+                            <input matInput formControlName="firstname" placeholder="First Name" type="text" required>
+                            <mat-hint>
+                              <span [hidden]="!(formErrors.firstname)">
+                               {{formErrors.firstname}}</span>
+                            </mat-hint>
+                          </mat-input-container>
+                      </div>
+                  </div>
+
+                  <div fxFlex fxLayout="column" class="content-div">
+                      <div fxFlex class="title-div">
+                          <p>Last name</p>
+                      </div>
+                      <div fxFlex class="title-div">
+
+                      </div>
+                  </div>
+
+                  <div fxFlex="100" fxLayout="column" class="content-div">
+                      <div fxFlex class="title-div">
+                          <p>Email</p>
+                        </div>
+                        <div fxFlex class="title-div">
+  
+                        </div>
+                  </div>
+                  <div fxFlex="100" fxLayout="column" class="content-div">
+                      <div fxFlex class="title-div">
+                          <p>Phone Number</p>
+                        </div>
+                        <div fxFlex class="title-div">
+  
+                        </div>
+                  </div>
+                  <div fxFlex="100" fxLayout="column" class="content-div">
+                      <div fxFlex class="title-div">
+                          <p>Password</p>
+                        </div>
+                        <div fxFlex class="title-div">
+  
+                        </div>
+                  </div>
+      
+      </div>
+
+</div>  -->
+
+
+
+<div class="flex-container" fxLayout="row" style="padding: 40px;" fxLayoutAlign="center center" >
+    
+    <div fxFlex="25" style="height: 1px"></div>
+
+    <div fxFlex="30" class="profil-header sminka" fxLayoutAlign="center center">
+      <h3>Send us your feedback</h3>
+  
+    </div>
+
+    <div fxFlex="25" style="height: 1px"></div>
+
+    <div class="flex-container sminka1" fxFlex="30" fxLayout="row">
+
+      <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-input-container class="half-width"
+          dividerColor="{{(feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="firstname" placeholder="First Name" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.firstname)">
+                {{formErrors.firstname}}</span>
+            </mat-hint>
+          </mat-input-container>
+          <mat-input-container class="half-width"
+          dividerColor="{{(feedbackForm.get('lastname').hasError('required') && feedbackForm.get('lastname').touched) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="lastname" placeholder="Last Name" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.lastname)">
+                {{formErrors.lastname}}
+              </span>
+            </mat-hint>
+          </mat-input-container>
+        </p>
+        <p>
+          <mat-input-container class="half-width"
+          dividerColor="{{formErrors.phone ? 'warn' : 'primary'}}">
+            <input matInput formControlName="phone" placeholder="Tel. Number" type="tel" pattern="[0-9]*" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.phone)">
+                {{formErrors.phone}}</span>
+            </mat-hint>
+          </mat-input-container>
+          <mat-input-container class="half-width" dividerColor="{{formErrors.email ? 'warn':'primary'}}">
+            <input matInput formControlName="email" placeholder="Email" type="email" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.email)">{{formErrors.email}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </p>
+        <p>
+          <mat-input-container class="half-width">
+            <input matInput formControlName="password" placeholder="Password" type="password" required>
+          </mat-input-container>
+        </p>
+        <table class="form-size">
+          <td>
+          <mat-slide-toggle formControlName="agree">Export type?</mat-slide-toggle>
+          </td>
+          <td>
+          <mat-select placeholder="How?" formControlName="exportType">
+            <mat-option *ngFor="let ctype of exportType" [value]="ctype">
+              {{ ctype }}
+            </mat-option>
+          </mat-select>
+          </td>
+          </table>
+        <p>
+          <mat-input-container class="full-width">
+            <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
+          </mat-input-container>
+        </p>
+        <button type="submit" mat-button class="background-primary text-floral-white"
+        [disabled]="feedbackForm.invalid">Submit</button>
+      </form>
+    </div>
+</div>
+

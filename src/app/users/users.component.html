@@ -1,1 +1,59 @@
-<app-users-table></app-users-table>
+<div class="flex-container"
+     ngClass.gt-lg="container-padding-lg"
+     ngClass.lg="container-padding-lg"
+     ngClass.md="container-padding-sm"
+     ngClass.sm="container-padding-sm" fxLayout="row">
+
+    <div fxFlex="100" fxLayout="row" class="example-container component-text " *ngIf="usersData">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">{{usersData.msg}}</h1>
+            <small>List of all users registered in Greengage application with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <i class="material-icons header-icon">people</i>
+        </div>
+    </div>
+
+
+    <div fxFlex class="table-div" *ngIf="usersData">
+        <div class="flex-container">
+        </div>
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead ngClass.sm="table-head-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Company</th>
+                    <th class="view-delete">View / Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersData.users">
+                    <td ngClass.sm="td-sm" >{{ user.name }}</td>
+                    <td ngClass.sm="td-sm">{{ user.email }}</td>
+                    <td ngClass.sm="td-sm">{{user.Company}}</td>
+                    <td>
+                        <button class="img-padding" ngClass.gt-sm="button-green"
+                                ngClass.sm="button-green-sm" mat-button [routerLink]="['/userdetails', user.id]">
+                                <i class="material-icons small-icons">pageview</i>
+                            
+                        </button>
+                        <button class="icon-padding" ngClass.gt-sm="button-red"
+                                ngClass.sm="button-red-sm" mat-button (click)="showAlert(user)">
+                            <i class="material-icons small-icons">delete_forever</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <!--
+            <div id="new-paginate"></div> -->
+        </table>
+
+
+
+    </div>
+</div>
+<div class="center" [hidden]="usersData || errMess">
+    <mat-progress-spinner style="margin:0 auto; position:absolute;
+        right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

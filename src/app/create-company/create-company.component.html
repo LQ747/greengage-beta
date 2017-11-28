@@ -1,0 +1,72 @@
+<div ngClass.gt-lg="login-form-lg" 
+ngClass.lg="login-form-lg" 
+ngClass.md="login-form-md"  
+ngClass.sm="login-form-sm">
+<div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between none" >
+   <h2>Create Company</h2>
+   <i class="material-icons margin">edit</i>
+ </div>
+ <mat-dialog-content
+ ngClass.gt-lg="form-dimensions-lg" 
+ ngClass.lg="form-dimensions-lg" 
+ ngClass.md="form-dimensions-md" 
+ ngClass.sm="form-dimensions-sm">
+   <div  fxFlex fxFlexOffset="20px" class="form-size">
+     <form novalidate [formGroup]="createCompanyForm">
+         <p>
+         <mat-input-container class="input-margin half-width" 
+         dividerColor="{{(formErrors.name) ? 'warn' : 'primary'}}">
+         <input matInput formControlName="name" placeholder="Name" type="text">
+          <mat-hint>
+            <span [hidden]="!(formErrors.name)">
+              {{formErrors.name}}</span>
+          </mat-hint>
+        </mat-input-container>
+      
+         <mat-input-container class="half-width"
+         dividerColor="{{(formErrors.location) ? 'warn' : 'primary'}}">
+        <input matInput formControlName="location" placeholder="Location" type="text">
+          <mat-hint>
+            <span [hidden]="!(formErrors.location)">
+              {{formErrors.location}}</span>
+          </mat-hint>
+        </mat-input-container>
+       </p>
+       <p> 
+         <mat-input-container class="input-margin half-width"
+         dividerColor="{{(formErrors.phone) ? 'warn' : 'primary'}}">
+        <input matInput formControlName="phone" placeholder="phone" type="tel" pattern="[0-9]*">
+          <mat-hint>
+            <span [hidden]="!(formErrors.phone)">
+              {{formErrors.phone}}</span>
+          </mat-hint>
+        </mat-input-container>
+       
+         <mat-input-container  class="half-width"
+         dividerColor="{{(formErrors.email) ? 'warn' : 'primary'}}">
+        <input matInput formControlName="email" placeholder="E-mail" type="email">
+          <mat-hint>
+            <span [hidden]="!(formErrors.email)">
+              {{formErrors.email}}</span>
+          </mat-hint>
+        </mat-input-container>
+       </p>
+      <p>
+          <mat-input-container class="input-margin half-width"
+          dividerColor="{{(formErrors.zip) ? 'warn' : 'primary'}}">
+         <input matInput formControlName="zip" placeholder="Zip" type="text">
+           <mat-hint>
+             <span [hidden]="!(formErrors.zip)">
+               {{formErrors.zip}}</span>
+           </mat-hint>
+         </mat-input-container>
+      </p>
+
+       <mat-dialog-actions>
+         <button type="submit" mat-button class="back-button" (click)="onCloseConfirm()">Confirm</button>
+        <button mat-button class="back-button" (click)="onCloseCancel()">Cancel</button>
+      </mat-dialog-actions>
+     </form>
+   </div>
+ </mat-dialog-content>
+</div>

@@ -1,15 +1,115 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
-    <div *ngIf="deviceData" >
-        <mat-card>
-            <mat-card-title>{{deviceData.msg}}</mat-card-title>
-        </mat-card>
-        <mat-list-item >
-            <p><b>Device Name:</b> {{deviceData.device.deviceName}}</p>
-         </mat-list-item>
+<div class="flex-container"
+     ngClass.lg="page-padding-lg"
+     ngClass.md="container-padding-sm"
+     ngClass.sm="container-padding-sm" fxLayout="row" *ngIf="deviceData">
+
+      <!-- Header -->
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="deviceData">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">Device name: {{deviceData.device.deviceName}}</h1>
+            <small>Full details of selected device.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <i class="material-icons header-icon">router</i>
+        </div>  
     </div>
-    <div class="center" [hidden]="deviceData || errmess">
-        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
-      </div>
-    <button mat-fab (click)="goBack()">BACK</button>
+
+
+
+
+    <div fxFlex="100"
+    ngClass.gt-lg="profil-img-lg sminka-lg  profil-details-lg" 
+    ngClass.lg="profil-img-lg sminka-lg  profil-details-lg" 
+    ngClass.md="profil-img-md sminka-md  profil-details-md" 
+    ngClass.sm="profil-img-sm sminka-sm  profil-details-sm" fxLayout="row" class="flex-container sminka" fxLayoutAlign=" start">
+
+        <div fxLayout="row" class="flex-container">
+
+
+            <div class="profil-details-icons" ngClass.gt-lg="profil-details-icons-lg" ngClass.lg="profil-details-icons-lg"  ngClass.md="profil-details-icons-md" ngClass.sm="profil-details-icons-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">spellcheck</i>
+            </div>
+            <div fxFlex="92" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p>
+                    <b>Device Name: </b>{{deviceData.device.deviceName}}</p>
+            </div>
+
+            <div class="profil-details-icons" ngClass.gt-lg="profil-details-icons-lg" ngClass.lg="profil-details-icons-lg"  ngClass.md="profil-details-icons-md" ngClass.sm="profil-details-icons-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">scanner</i>
+            </div>
+            <div fxFlex="92" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p>
+                    <b>Hardware Version: </b>{{deviceData.device.version}}</p>
+            </div>
+
+            <div class="profil-details-icons" ngClass.gt-lg="profil-details-icons-lg" ngClass.lg="profil-details-icons-lg"  ngClass.md="profil-details-icons-md" ngClass.sm="profil-details-icons-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">developer_board</i>
+            </div>
+            <div fxFlex="92" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p>
+                    <b>Firmware Version: </b>{{deviceData.device.version}}</p>
+            </div>
+
+            <div class="profil-details-icons" 
+            ngClass.gt-lg="profil-details-icons-lg" 
+            ngClass.lg="profil-details-icons-lg"  
+            ngClass.md="profil-details-icons-md" 
+            ngClass.sm="profil-details-icons-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">router</i>
+            </div>
+            <div fxFlex="92" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p>
+                    <b>Device Status: </b>{{deviceData.device.status}}</p>
+            </div>
+
+            <div class="profil-details-icons" 
+            ngClass.gt-lg="profil-details-icons2-lg" 
+            ngClass.lg="profil-details-icons2-lg"  
+            ngClass.md="profil-details-icons2-md"  
+            ngClass.sm="profil-details-icons2-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">insert_chart</i>
+            </div>
+            <div fxFlex="20" fxFlex.lg="22" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p class="margin-correct">
+                    <b>Device Measurement: </b>
+                </p>
+            </div>
+            <div fxFlex="70" class="button-aligne">
+                    <button [routerLink]="['/measurement', deviceData.device.id]" mat-icon-button class="marg2">
+                        <i class="material-icons small-icons this-icon"
+                            ngClass.gt-lg="this-icon-lg"
+                            ngClass.lg="this-icon-lg"
+                            ngClass.md="this-icon-md"
+                            ngClass.sm="this-icon-sm">pageview</i>
+                    </button>
+            </div>
+
+            <div class="profil-details-icons" 
+            ngClass.gt-lg="profil-details-icons2-lg" 
+            ngClass.lg="profil-details-icons2-lg"  
+            ngClass.md="profil-details-icons2-md"  
+            ngClass.sm="profil-details-icons2-sm" fxFlex="7" fxFlex.md="6" fxFlex.lg="5">
+                <i class="material-icons small-icons">settings_input_antenna</i>
+            </div>
+            <div fxFlex="20" fxFlex.lg="22" ngClass.gt-lg="text-divs-lg" ngClass.lg="text-divs-lg" ngClass.md="text-divs-md" ngClass.sm="text-divs-sm">
+                <p class="margin-correct">
+                    <b>Available Sensors: </b>
+                </p>
+            </div>
+            <div fxFlex="70" class="button-aligne">
+                    <button [routerLink]="['/sensors', deviceData.device.id]" mat-icon-button class="marg">
+                    <i class="material-icons small-icons this-icon"
+                       ngClass.gt-lg="this-icon-lg"
+                       ngClass.lg="this-icon-lg"
+                       ngClass.md="this-icon-md"
+                       ngClass.sm="this-icon-sm">pageview</i>
+                    </button>
+            </div>
+        </div>
     </div>
-    
+    <div><button *ngIf="deviceData" mat-button class="back-button" (click)="goBack()">BACK</button></div> 
+</div>
+<div class="center" [hidden]="deviceData || errMess">
+    <mat-progress-spinner style="margin:0 auto; position:absolute;
+                right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

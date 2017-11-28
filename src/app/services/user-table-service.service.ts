@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { ProcessHttpmgService } from './process-httpmg.service';
 
 import { IUsers } from '../shared/IUsers';
-import { USERS } from '../shared/usersData';
 import { IUser } from '../shared/IUser';
 
 
@@ -13,12 +12,11 @@ import { IUser } from '../shared/IUser';
 @Injectable()
 export class UserTableServiceService {
 
-  private korisnici: IUsers = USERS;
-  private names: string[];
-  constructor() { }
+  //  public names = ["Luka",]
+  // constructor() { }
 
-  getUsersName(): string[] {
-    return this.names = this.korisnici.users.map( el => el.name);
-  }
+  // getUsersName(): string[] {
+  //   return this.names = this.korisnici.users.map( el => el.name);
+  // }
 
 }

@@ -1,0 +1,275 @@
+.events-div-sm{
+    height: 70vw !important;
+}
+
+.mat-card-header p{
+    margin: auto;
+    margin-left: 2px;
+    font-size: 1em;
+    font-weight: 600;    
+}
+
+.mat-card{
+    // padding: 2.34375vw;
+    padding-top: 0.48828125vw;
+    margin-bottom: 1.46484375vw;
+    border: 1px solid #e4e5e7;
+    border-radius: 2px;
+    background: #f6f6f6;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: none;
+}
+
+.mat-card-avatar{
+    margin-bottom: 0.68359375vw;
+    height: 5.22265625vw;
+    width: 5.22265625vw;
+    
+}
+
+.cards1{
+    background: #f6f6f6;
+    color: #383838;
+    text-align: center;
+}
+
+
+.text-div p {
+    margin-bottom: 0 !important;
+    margin-top: 1.4vw;
+    font-size: 1.86vw;
+}
+
+.info-div{
+    margin-left: 2vw;
+    padding-top: 0.67vw;
+}
+
+.icon{
+    font-size: 10vw !important;
+    color: #6a6c6f;
+    margin: 0 auto;
+}
+
+.icon-div{
+    // padding-top: 0.9765625vw;
+    border-right: 1px solid #e4e5e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-logo{
+    height: 2.44140625vw;
+}
+
+.map-div{
+    margin-top: 1.46484375vw; 
+}
+
+.profil-details-icons{
+    color: #A2D45C;
+    margin-right: 2px;
+    margin-top: 0.5vw;
+}
+
+.farm-button{
+    margin-top: 1.46484375vw;
+}
+
+.txt-margin{
+    margin-bottom: 1.171875vw;
+    font-size: 1.7vw;
+    color: #6a6c6f;
+}
+
+.temperatura{
+    height: 200px;
+    background-color: black;
+}
+
+.farm-info{
+    margin-right: 1.441406vw;
+}
+
+.text-div{
+    margin-left: 1vw;
+}
+
+.profil-temp{
+    margin-right: 0px !important;
+    padding-left: 1.953125vw;
+}
+
+.profil-temp p{    
+    margin-top: 1.7578125vw;
+    font-size: 1.85546875vw;
+    line-height: 1.1;
+    font-weight: 300;
+    color: #6a6c6f;
+}
+
+
+.temp-text{
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: #6a6c6f;
+    padding-left: 2vw;
+}
+
+
+.current-temp{
+    margin-left: 3.3vw;
+    color:green;
+}
+
+.number-of{
+    margin-top: 1vw !important;
+}
+
+.mat-tab-group{
+    width: -webkit-fill-available;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 6px; 
+}
+
+.even{
+    background-color:#d5eacb;
+    flex-wrap: wrap;
+    padding: 10px; 
+  }
+  
+  .odd{
+    background-color:white;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
+
+.event-container:nth-last-child(1)
+{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.event-item {
+  overflow: hidden;
+}
+
+.events-div > div > div
+{
+    border-radius: 10px;
+}
+
+.p-margin p{
+    margin: 0;
+}
+
+.co2{
+    height: 35px;
+}
+
+// !!!!!!!!!!!!!!!! xl !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!! lg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.material-icons-lg{ 
+    font-size: 2.296875vw; 
+} 
+
+.nh3-lg{
+    height: 2.49vw;
+}  
+
+.material-imgs-lg{
+    height: 2.4vw;
+}
+
+
+.temp-lg{
+    margin-left: 3.95vw;
+    min-width: 5.46875vw;
+}
+
+.container-padding-lg{
+    padding-top: 1vw;
+}
+
+.temp-text-lg{
+    font-size: 1.4vw;
+    padding-left: 2vw;
+    color: #585858;
+}
+
+
+
+// !!!!!!!!!!!!!!!! md !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+.material-imgs-md{
+    height: 3vw;
+}
+
+
+.temp-md{
+    min-width: 9.46875vw;
+    margin-left: 2.4vw;
+}
+
+.temp-text-md{
+    font-size: 1.85vw;
+    padding-left: 2vw;
+}
+
+.material-icons1-md{ 
+    font-size: 3.9296875vw; 
+  } 
+
+.nh3-md{
+    height: 4.3vw;
+}
+
+
+
+// !!!!!!!!!!!!!!!! sm !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.material-imgs-sm{
+    height: 4vw;
+}
+
+
+.temp-text-sm{
+    padding-left: 2vw;
+    font-size: 2.2vw;
+    font-weight: 500;
+    color: #585858;
+}
+
+.container-padding-sm{
+    padding-top: 1vw;
+}
+
+.material-icons-sm{
+    font-size: 3.38vw;
+}
+
+.material-icons1-sm{ 
+    font-size: 3.9296875vw; 
+  } 
+
+.nh3-sm{
+    height: 4.3vw;
+}
+
+.temp-sm{
+    min-width: 9.46875vw;
+    margin-left: 3.4vw;
+}

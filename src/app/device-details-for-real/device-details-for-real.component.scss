@@ -1,0 +1,280 @@
+.profil-header{ 
+  height: 7.421875vw; 
+  border-radius: 0.1953125vw;
+}
+
+.profil-header p{
+  background-color: #303030; 
+  color:black; 
+} 
+
+.profil-img{ 
+  margin-left: 0px !important; 
+  //padding-left: 20px; 
+  height:26.85546875vw; 
+  text-align: center; 
+} 
+.icon{ 
+  border-radius: 50%; 
+  background-color: white; 
+  border: 0.09765625vw solid #e4e5e7;  
+} 
+
+.icon-div{ 
+  //text-align: center; 
+  padding-top: 0.9765625vw; 
+} 
+
+.credentials-div{ 
+  margin-top: 1.7578125vw; 
+  font-size: 1.46484375vw; 
+  line-height: 1.1; 
+  font-weight: 300; 
+  color: #6a6c6f; 
+} 
+
+.profil-details-txt{ 
+  color: #6a6c6f; 
+  padding:1.66015625vw; 
+  padding-left: 1.953125vw; 
+  border: 0.09765625vw solid #e4e5e7; 
+  border-radius:0.1953125vw; 
+  height: 5.46875vw; 
+   
+} 
+
+.profil-details-txt h3{ 
+  font-size: 1.953125vw; 
+  line-height: 1.1; 
+  font-weight: 300; 
+  margin: auto;  
+} 
+
+.profil-details-icons{ 
+  color: #A2D45C; 
+} 
+
+.profil-temp-txt{ 
+  height: 5.46875vw; 
+  background-color: black; 
+  margin-right: 0px !important; 
+  padding-left: 1.953125vw; 
+} 
+.profil-temp-txt h4{     
+  margin-top: 1.7578125vw; 
+  font-size:1.85546875vw; 
+  line-height: 1.1; 
+  font-weight: 300; 
+  color: #6a6c6f; 
+} 
+
+.profil-temp{ 
+  height:25.87890625vw; 
+  margin-right: 0px !important; 
+  padding-left:1.953125vw; 
+} 
+
+.profil-temp p{     
+  margin-top: 1.7578125vw; 
+  //font-size: 19.5px; 
+  line-height: 1.1; 
+  font-weight: 300; 
+  color: #6a6c6f; 
+} 
+
+.profil-temp-input{ 
+  background-color: white; 
+  border:0.09765625vw solid #e4e5e7; 
+  border-radius: 0.1953125vw;    
+} 
+
+.flex-container { 
+  flex-wrap: wrap; 
+} 
+
+.this-icon{
+  color: #6a6c6f;
+}
+
+.farmName { 
+  font-size: 2.9296875vw; 
+  line-height: 1.1; 
+  font-weight: 300; 
+  margin:0; 
+  margin-bottom: 0.48828125vw; 
+}
+
+
+.margin-correct{
+  margin-top: 14px;
+}
+
+
+.button-aligne{
+  padding-top: 11px;
+}
+
+.marg{
+  margin-top: 0 !important;
+  margin-left: 2vw !important;
+}
+
+.marg2{
+  margin-left: 1.9765625vw;
+  margin-top: 0 !important;
+}
+
+
+//////////////////////////////////////////////////////  lg  ///////////////////////////////////////////////////////////////
+
+.this-icon-lg{
+  font-size: 3.5vw;
+}
+
+.button-sizing-lg{
+  min-width: 5vw;
+}
+
+.material-icons-lg{ 
+  font-size: 2.296875vw; 
+} 
+
+.page-padding-lg{
+  padding: 11.95313vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+.farmName-lg{
+  font-size: 2.296875vw;
+  line-height: 1.1;
+  font-weight: 300;
+  margin:0;
+  margin-bottom: 0.48828125vw;
+}
+
+
+.sminka-lg{
+  margin-top: 1vw;
+}
+
+
+.profil-details-lg{ 
+  height: 31.695313vw; 
+  padding-left: 1.953125vw; 
+  padding-top: 0.7578125vw; 
+}
+
+.profil-details-lg p{ 
+  color: #6a6c6f; 
+  font-size:1.35625vw; 
+  line-height: 1.1; 
+  font-weight: 300;    
+} 
+
+.profil-details-icons-lg{ 
+  padding-top: 0.68359375vw;  
+} 
+.profil-details-icons2-lg{ 
+  padding-top: 0;  
+} 
+
+.text-divs-lg{
+  height: 5vw;
+}
+
+  //////////////////////////////////////////////////////  md  ///////////////////////////////////////////////////////////////
+
+  .profil-details-md{ 
+    padding-left: 1.953125vw; 
+    padding-top: 1.7578125vw;
+    padding-bottom: 0.5vw; 
+  }
+  
+  .profil-details-md p{ 
+    color: #6a6c6f; 
+    font-size:1.66015625vw; 
+    line-height: 1.1; 
+    font-weight: 300;    
+  } 
+
+  .this-icon-md{
+    font-size: 4.5vw;
+  }
+
+  .button-sizing-md{
+    min-width: 5vw;
+  }
+
+  .material-icons-md{ 
+    font-size: 2.9296875vw; 
+  } 
+
+  .profil-details-icons-md{ 
+    padding-top: 0.68359375vw;  
+  } 
+
+  .profil-details-icons2-md{ 
+    padding-top: 0.68359375vw;  
+  } 
+
+  .text-divs-md{
+    height: 5.859375vw;
+    padding-top: 4px;
+  }
+
+  //////////////////////////////////////////////////////  sm  ///////////////////////////////////////////////////////////////
+
+  .this-icon-sm{
+    font-size: 4.85vw;
+  }
+
+  .button-sizing-sm{
+    min-width: 11vw;
+  }
+
+  .profil-details-icons-sm{ 
+    padding-top: 0.68359375vw;  
+  } 
+
+  .profil-details-icons2-sm{ 
+    padding-top: 1.45683593vw;  
+  } 
+
+  .material-icons-sm{ 
+    font-size: 2.9296875vw; 
+  } 
+
+  .page-padding-sm{
+    padding: 1.953125vw;
+  }
+
+.farmName-sm{
+  font-size: 2.9296875vw;
+  line-height: 1.1;
+  font-weight: 300;
+  margin:0;
+  margin-bottom: 0.48828125vw;
+}
+
+.sminka-sm{
+  margin-top: 1.46484375vw;
+
+}
+
+
+.profil-details-sm{ 
+  padding-left: 1.953125vw; 
+  padding-top: 1.7578125vw;
+  padding-bottom: 2vw; 
+}
+
+.profil-details-sm p{ 
+  color: #6a6c6f; 
+  font-size:1.66015625vw; 
+  line-height: 1.1; 
+  font-weight: 300;    
+} 
+
+.text-divs-sm{
+  padding-top: 9px;
+}

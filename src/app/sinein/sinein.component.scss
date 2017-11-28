@@ -1,0 +1,221 @@
+
+//  /deep/ .mat-radio-button.mat-accent .mat-radio-inner-circle {
+//     background-color:#4C9D2A;
+//   }
+
+// /deep/ .mat-radio-outer-circle{
+//     background-color:#4C9D2A;
+// }
+
+// ::ng-deep .mat-input-underline {
+//     display: none;
+// }
+
+::ng-deep .mat-form-field-underline{
+    background-color: #e4e4e8 !important;
+}
+
+:host /deep/ .mat-input-placeholder{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+// :host /deep/ .mat-checkbox-background, .mat-checkbox-frame{
+//     border-radius: 50%;
+//     background-color: #4C9D2A;
+// }
+
+// input .mat-input-element, .ng-dirty, ng-invalid, .ng-touched label {
+//     color: green;
+//     }
+
+// ::ng-deep .mat-input-wrapper { 
+//     padding-top: 15px;
+// }
+
+.myinput{
+    height: 40px !important;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: white;
+    font-size: 17px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+::ng-deep .mat-form-field-infix{
+    border-top: none !important;
+}
+
+.full-width{
+    width: 95%;
+}
+
+.half-width{
+    width: 45%;
+}
+
+.form-size{
+   width: 45%;
+   padding-left: 8vw;
+   padding-right: 7vw; 
+}
+
+
+.form-welcome{
+    font-weight: 200;
+    line-height: 1.1;
+    color: #6a6c6f;
+    text-align: center;
+}
+
+.mat-button{
+    background-color: #4C9D2A;
+    width: 98%;
+    border-radius: 10px;
+    color: white !important;
+    
+}
+
+// .mat-dialog-container{
+//     padding: 0 !important;
+//     border-radius: 5px !important; 
+// }
+
+
+.login-container{
+    height: -webkit-fill-available;
+    width: 100%;
+    background-color: rgba(145, 145, 145,0.3);
+    padding-top: 45px;
+}
+
+
+.password-forgot{
+    text-align: center;
+    font-size: 15px;
+    color: #6a6c6f;
+    line-height: 1.42857143;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: 500;
+   
+}
+
+.password-forgot a{
+    text-decoration:none;
+    color: inherit;
+    
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373;
+}
+
+.small {
+    font-size: 75%;
+}
+
+.logo{
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.sinein-container{
+    margin: 0;
+    background-color: #e4e5e7;
+    border-radius: 30px;    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////// gt-lg /////////////////////////////////////////////
+
+.form-gt-lg{
+    height: 23vw;
+    width: 30vw;
+    position: relative;
+    left: 35%;
+    top: 78px;
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////// lg /////////////////////////////////////////////
+
+.form-lg{
+    height: 31vw;
+    width: 41vw;
+    padding-bottom: 1vw;
+    position: relative;
+    left: 29%;
+    top: 78px;
+}
+
+.logo-lg{
+    margin-top: 2vw;
+}
+
+.logo-img-lg{
+    height: 6.15vw;
+}
+
+.myinput-md{
+    width: 380px;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////// md /////////////////////////////////////////////
+
+.form-md{
+    height: 45vw;
+    width: 54vw;
+    padding-bottom: 1vw;
+    position: relative;
+    left: 23%;
+    top: 78px;
+}
+
+.logo-md{
+    margin-top: 3vw;
+}
+
+.logo-img-md{
+    height: 6.15vw;
+}
+
+.myinput-md{
+    width: 380px;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////// sm /////////////////////////////////////////////
+
+.logo-img-sm{
+    height: 6.15vw;
+}
+
+.form-sm{
+    height: 62vw;
+    width: 59vw;
+    padding-bottom: 1vw;
+    position: relative;
+    left: 21%;
+    top: 78px;
+}
+
+.logo-sm{
+    margin-top: 6.5vw;
+    height: 84px;
+}
+
+.myinput-sm{
+    width: 320px;
+}

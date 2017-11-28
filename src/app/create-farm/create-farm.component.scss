@@ -1,0 +1,142 @@
+.full-width{
+    width: 100%;
+}
+
+.half-width{
+    width: 85%;
+}
+
+.wrap-icon{
+    display: flex;
+}
+
+.margin{
+    margin-top: 28px;
+}
+
+.mat-dialog-title{
+    color: white;
+    background-color: #4C9D2A;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+/deep/ .mat-icon {
+    color: #5c5e61;
+    width: 35px;
+    height: 35px;
+    margin: 15px 20px 0 0;
+}
+
+.form-size{
+    background-color: white;
+    border-bottom: 1px solid darkgray;
+}
+
+.material-icons{
+    font-size: 35px;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////// gt-lg ////////////////////////////////////////////////////////////////////////
+
+.form-dimensions-gt-lg{
+    width: 100%;
+    height: 25vw;  
+}
+
+.icon-margin-gt-lg{
+    margin-left: 4vw;
+}
+
+.buttons-gt-lg{
+    margin-top: 4vw;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////// lg ////////////////////////////////////////////////////////////////////////
+
+.icon-margin-lg{
+    margin-left: 4vw;
+}
+
+.form-dimensions-lg{
+    height: 36vw;  
+}
+
+.login-form-lg{
+    height: 100%;
+    width: 100%;
+}
+
+.half-width-lg{
+    width: 45%
+}
+
+.form-size-lg{
+    padding-left: 5vw;
+    padding-top: 3vw;  
+}
+
+.buttons-lg{
+    margin-top: 7vw;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////// md ////////////////////////////////////////////////////////////////////////
+
+.icon-margin-md{
+    margin-left: 4vw;
+}
+.form-dimensions-md{
+    height: 44vw;  
+}
+
+.login-form-md{
+    height: 55.59375vw;
+}
+
+.half-width-md {
+    width: 37%
+}
+
+.form-size-md{
+    padding-left: 5vw;
+    padding-top: 3vw;  
+}
+
+.buttons-md{
+    margin-top: 7vw;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////// sm ////////////////////////////////////////////////////////////////////////
+
+.icon-margin-sm{
+    margin-left: 6vw;
+}
+
+.form-dimensions-sm{
+    height: 56vw;
+    padding-right: 0;
+}
+
+.mat-dialog-title-sm{
+    font-size: 2.81vw;
+}
+
+.login-form-sm{
+    height: 100%;
+    width: 100%;
+}
+
+.form-size-sm{
+    padding-left: 5vw;
+    padding-top: 5vw;
+}
+
+.buttons-sm{
+    margin-top: 7vw;
+}

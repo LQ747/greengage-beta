@@ -1,0 +1,114 @@
+<div class="flex-container"
+ ngClass.gt-lg="page-padding-lg"
+ ngClass.lg="page-padding-lg"
+ ngClass.md="container-padding-md"
+ ngClass.sm="container-padding-sm" fxLayout="row" *ngIf="sensorsData">
+    
+      <!-- Header -->
+      <div fxFlex="100" fxLayout="row" class="example-container component-text">
+            <div fxFlex="73" class="example-header">
+                <h1 class="farmName">AD2037 device</h1>
+                <small>List of sensors on selected device with basic details.</small>
+            </div>
+            <div fxFlex fxLayoutAlign="end end">
+                <i class="material-icons header-icon">settings_input_antenna</i>
+            </div>  
+        </div>
+
+ 
+      <!-- NOVI -->
+
+      <div fxFlex="100"
+      ngClass.gt-lg="profil-img-lg sminka-lg  profil-details-lg" 
+      ngClass.lg="profil-img-lg sminka-lg  profil-details-lg"  
+      ngClass.md="profil-img-sm sminka-sm  profil-details-md"
+      ngClass.sm="profil-img-sm sminka-sm  profil-details-sm" fxLayout="row" class="flex-container sminka" fxLayoutAlign=" start">
+  
+          <div fxLayout="row" class="flex-container">
+  
+  
+              <div ngClass.gt-lg="profil-details-icons-lg" 
+              ngClass.lg="profil-details-icons-lg"  
+              ngClass.md="profil-details-icons-md" 
+              ngClass.sm="profil-details-icons-sm" fxFlex="5" fxFlex.md="6">
+                <img class="material-imgs" src="/assets/images/sensors/humidity.png" alt="">
+              </div>
+              <div fxFlex="92" 
+              ngClass.gt-lg="text-divs-lg" 
+              ngClass.lg="text-divs-lg" 
+              ngClass.md="text-divs-md" 
+              ngClass.sm="text-divs-sm">
+                  <p>
+                      <b>Humidity: </b> <span [ngClass]="{'green' : HumidityClass, 'red': !HumidityClass}">{{Humidity}}</span> </p>
+              </div>
+  
+              <div ngClass.gt-lg="profil-details-icons-lg" 
+              ngClass.lg="profil-details-icons-lg"  
+              
+              ngClass.md="profil-details-icons-md" 
+              ngClass.sm="profil-details-icons-sm" fxFlex="5" fxFlex.md="6">
+              <img class="material-imgs" src="/assets/images/sensors/temperature.png" alt="">
+              </div>
+              <div fxFlex="92" 
+              ngClass.gt-lg="text-divs-lg" 
+              ngClass.lg="text-divs-lg" 
+              ngClass.md="text-divs-md" 
+              ngClass.sm="text-divs-sm">
+                  <p>
+                      <b>Temperature: </b><span  [ngClass]="{'green' : TempClass, 'red': !TempClass}">{{Temperature}}</span></p>
+              </div>
+  
+              <div ngClass.gt-lg="profil-details-icons-lg" 
+              ngClass.lg="profil-details-icons-lg"  
+              
+              ngClass.md="profil-details-icons-md" 
+              ngClass.sm="profil-details-icons-sm" fxFlex="5" fxFlex.md="6">
+              <img class="material-imgs" src="/assets/images/sensors/co2-cloud.svg" alt="">
+              </div>
+              <div fxFlex="92" 
+              ngClass.gt-lg="text-divs-lg" 
+              ngClass.lg="text-divs-lg" 
+              ngClass.md="text-divs-md" 
+              ngClass.sm="text-divs-sm">
+                  <p>
+                      <b>CO2: </b> <span [ngClass]="{'green' : co2class, 'red': !co2class}"> {{co2}} </span></p>
+              </div>
+  
+              <div ngClass.gt-lg="profil-details-icons-lg" 
+              ngClass.lg="profil-details-icons-lg"  
+              
+              ngClass.md="profil-details-icons-md" 
+              ngClass.sm="profil-details-icons-sm" fxFlex="5" fxFlex.md="6">
+                  <img class="material-imgs" src="/assets/images/sensors/rgb.png" alt="">
+              </div>
+              <div fxFlex="92" 
+              ngClass.gt-lg="text-divs-lg" 
+              ngClass.lg="text-divs-lg" 
+              ngClass.md="text-divs-md" 
+              ngClass.sm="text-divs-sm">
+                  <p>
+                      <b>RGB: </b> <span  [ngClass]="{'green' : RGBClass, 'red': !RGBClass}">{{RGB}}</span></p>
+              </div>
+  
+              <div ngClass.gt-lg="profil-details-icons-lg" 
+              ngClass.lg="profil-details-icons-lg"  
+              ngClass.md="profil-details-icons-md" 
+              ngClass.sm="profil-details-icons-sm" fxFlex="5" fxFlex.md="6">
+              <img class="material-imgs" src="/assets/images/sensors/nh3.png" alt="">
+              </div>
+              <div fxFlex="92" 
+              ngClass.gt-lg="text-divs-lg" 
+              ngClass.lg="text-divs-lg" 
+              ngClass.md="text-divs-md" 
+              ngClass.sm="text-divs-sm">
+                  <p>
+                      <b>NH3: </b><span  [ngClass]="{'green' : NH3Class, 'red': !NH3Class}">{{NH3}}</span></p>
+              </div>
+          </div>
+      </div>
+    <button mat-button class="back-button" (click)="goBack()">BACK</button>
+</div>
+<div class="center" [hidden]="sensorsData || errMess">
+    <mat-progress-spinner style="margin:0 auto; position:absolute;
+    right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

@@ -1,0 +1,125 @@
+<div ngClass.gt-lg="login-form-lg" 
+ ngClass.lg="login-form-lg" 
+ ngClass.md="login-form-md"  
+ ngClass.sm="login-form-sm">
+  <div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between none" >
+    <h2>Set Temperature</h2>
+    <img class="material-imgs" ngClass.gt-lg="img-fit-content" ngClass.lg="img-fit-content" ngClass.md="img-fit-content" src="/assets/images/sensors/temperatureWhite.png" alt="">
+  </div>
+  <mat-dialog-content 
+  ngClass.gt-lg="form-dimensions-lg" 
+  ngClass.lg="form-dimensions-lg" 
+  ngClass.md="form-dimensions-md" 
+  ngClass.sm="form-dimensions-sm">
+    <div fxFlex fxFlexOffset="20px" class="form-size">
+      <form novalidate [formGroup]="feedbackForm">
+        
+
+
+         <div fxFlex="100" fxLayout="row" class="flex-container">
+
+
+
+          <div fxFlex="100" fxLayout="row" class="flex-container"
+          ngClass.gt-lg="options-lg"
+          ngClass.lg="options-lg"
+          ngClass.md="options-md"
+          ngClass.sm="options-sm">
+          <div fxFlex="7" class="form-icons-div-sm" >
+              <mat-icon matPrefix class="form-icons">alarm</mat-icon>
+          </div>
+              <div fxFlex="28" fxFlex.md="24" class="form-option1">
+                  <p>Check for Alarm at:</p>
+               </div>
+                <div fxFlex class="form-option2">    
+                  <mat-form-field >
+                   <mat-select ngClass.sm="select-sm">
+                     <mat-option>None</mat-option>
+                     <mat-option *ngFor="let alarm of alarms" [value]="alarm.value">
+                       {{ alarm.viewValue }}
+                     </mat-option>
+                   </mat-select>
+
+                   <mat-hint>Select Time!</mat-hint>
+                   <mat-error>You must make a selection</mat-error>
+                 </mat-form-field>
+               </div>
+          </div>
+
+          <div fxFlex="100"  ngClass.gt-lg="options-lg"
+          ngClass.lg="options-lg"
+          ngClass.md="options-md"
+          ngClass.sm="options-sm">
+
+              <div fxFlex="7" class="form-icons-div-sm">
+                  <mat-icon matPrefix class="form-icons">textsms</mat-icon>
+              </div>
+              <div fxFlex="28" fxFlex.md="24" class="form-option3">
+                  <p>Action on Alarm:</p>
+              </div>
+                <div fxFlex class="form-option2">    
+                  <mat-form-field >
+                    <mat-select multiple>
+                      <mat-option *ngFor="let action of actions" [value]="action.value">
+                        {{ action.viewValue }}
+                      </mat-option>
+                    </mat-select>
+
+                    <mat-hint>Pick Method!</mat-hint>
+                    <mat-error>You must make a selection</mat-error>
+                  </mat-form-field>
+              </div>
+          </div>
+
+          <div fxFlex="100" ngClass.gt-lg="options-lg"
+          ngClass.lg="options-lg"
+          ngClass.md="options-md"
+          ngClass.sm="options-sm">
+          <div fxFlex="7" class="form-icons-div-sm">
+              <mat-icon matPrefix class="form-icons">swap_vert</mat-icon>
+          </div>
+              <div fxFlex="28" fxFlex.md="24" class="form-option3">
+                  <p>Alarm Condition</p>
+              </div>
+              <div fxFlex="38" fxFlex.md="32" class="form-option2">    
+                  <mat-form-field  >
+                    <mat-select ngClass.sm="select-sm">
+                      <mat-option>None</mat-option>
+                      <mat-option *ngFor="let condition of conditions" [value]="condition.value">
+                        {{ condition.viewValue }}
+                      </mat-option>
+                    </mat-select>
+
+                    <mat-hint>Pick your Condition!</mat-hint>
+                    <mat-error>You must make a selection</mat-error>
+                  </mat-form-field>
+              </div>
+    
+              <div fxFlex>        
+                  <mat-input-container ngClass.gt-lg="temp-width-lg"
+                  ngClass.lg="temp-width-lg"
+                  ngClass.md="temp-width-md"
+                  ngClass.sm="temp-width-sm"
+                  dividerColor="{{(formErrors.measurment) ? 'warn' : 'primary'}}">
+                   <input matInput formControlName="measurment" placeholder="Temperature" type="number" pattern="[0-9]*" required>
+                   <mat-hint>
+                     <span [hidden]="!(formErrors.measurment)">
+                       {{formErrors.measurment}}</span>
+                   </mat-hint>
+                 </mat-input-container>
+              </div>
+          </div>
+          
+              <div fxFlex="100" ngClass.gt-lg="mat-dialog-actions-lg"
+              ngClass.lg="mat-dialog-actions-lg"
+              ngClass.md="mat-dialog-actions-md"
+              ngClass.sm="mat-dialog-actions-sm">
+                  <button  [disabled]="feedbackForm.invalid" type="submit"  mat-button class="back-button" (click)="onCloseConfirm()">Confirm</button>
+                  <button mat-button class="back-button" (click)="onCloseCancel()">Cancel</button>
+              </div>
+          
+        </div>
+      </form>
+    </div>
+  </mat-dialog-content>
+</div>

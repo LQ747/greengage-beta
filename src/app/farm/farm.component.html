@@ -1,18 +1,55 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
-    <div *ngIf="data">
-        <mat-list-item *ngFor="let farm of data.farms" [routerLink]="['/farmdetails', farm.id]">
-            <a>{{farm.name}}</a>
-        </mat-list-item>
+<div class="flex-container"
+     ngClass.lg="container-padding-lg"
+     ngClass.md="container-padding-sm"
+     ngClass.sm="container-padding-sm" fxLayout="row">
+
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="data">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">All Farms</h1>
+            <small>List of all farms registered in Greengage application with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+                <img class="header-icons"  src="./assets/images/farmWhite.png">
+        </div>  
     </div>
-    <div class="center" [hidden]="data || errMess">
-        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
-    </div>
-    <div *ngIf="errMess">
-        <h2>Error</h2>
-        <h4>{{errMess}}</h4>
+
+
+    <div fxFlex class="table-div" *ngIf="data">
+        <div class="flex-container">
+
+        </div>
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead ngClass.sm="table-head-sm">
+                <tr>
+                    <th>Farm Name</th>
+                    <th>Company Name</th>
+                    <th>City</th>
+                    <th class="view-delete">Details</th>
+                    <th class="view-delete">Charts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let farm of data.farms">
+                    <td ngClass.sm="td-sm">{{farm.name}}</td>
+                    <td ngClass.sm="td-sm">{{farm.Company}}</td>
+                    <td ngClass.sm="td-sm">{{farm.Farmlocation}}</td>
+                    <td>
+                        <button mat-button [routerLink]="['/farmdetails', farm.id]">
+                            <i class="material-icons small-icons">pageview</i>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button [routerLink]="['/farmcharts', farm.id]">
+                            <img class="mat-icon2" src="./assets/images/charts.png">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
     </div>
 </div>
-
-
-
-
+<div class="center" [hidden]="data || errMess">
+    <mat-progress-spinner style="margin:0 auto; position:absolute;
+        right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>

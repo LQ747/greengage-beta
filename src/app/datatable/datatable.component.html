@@ -1,0 +1,27 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+    <div class="example-container mat-elevation-z8" *ngIf="usersData">
+            <div class="example-header">
+                <h1 class="farmName">{{usersData.msg}}</h1>
+            </div>
+        </div>
+<div *ngIf="usersData">
+<table datatable class="row-border hover">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>First name</th>
+  <th>Last name</th>
+  <th>View</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let user of usersData.users">
+  <td style="text-align:center;">{{ user.id }}</td>
+  <td style="text-align:center;">{{ user.name }}</td>
+  <td style="text-align:center;">{{ user.email }}</td>
+  <td><button [routerLink]="['/userdetails', user.id]">View Details</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>

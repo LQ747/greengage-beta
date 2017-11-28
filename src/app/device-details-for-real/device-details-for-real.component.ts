@@ -18,9 +18,7 @@ export class DeviceDetailsForRealComponent implements OnInit {
     private location:Location,private rote:ActivatedRoute) { }
 
   ngOnInit() {
-    let id = this.rote.snapshot.params['id'];
-    console.log(id);
-    
+    let id = this.rote.snapshot.params['id'];    
     this.deviceService.getDeviceDetails(id)
     .subscribe(
       data => this.deviceData = data,

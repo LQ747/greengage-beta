@@ -1,0 +1,49 @@
+<div ngClass.gt-lg="login-form-lg" 
+ ngClass.lg="login-form-lg" 
+ ngClass.md="login-form-md"  
+ ngClass.sm="login-form-sm">
+  <div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between none" >
+    <h2>Create new Action</h2>
+    <img class="material-imgs" ngClass.gt-lg="img-fit-content" ngClass.lg="img-fit-content" ngClass.md="img-fit-content" src="/assets/images/sensors/temperatureWhite.png" alt="">
+  </div>
+  <mat-dialog-content 
+  ngClass.gt-lg="form-dimensions-lg" 
+  ngClass.lg="form-dimensions-lg" 
+  ngClass.md="form-dimensions-md" 
+  ngClass.sm="form-dimensions-sm">
+    <div fxFlex fxFlexOffset="20px" class="form-size">
+        <form novalidate [formGroup]="createActionForm" (ngSubmit)="onSubmit()">
+            <div class="measurement-input">
+              <mat-input-container dividerColor="{{(formErrors.name) ? 'warn' : 'primary'}}">
+               <input matInput formControlName="name" placeholder="Action Name" type="text" required>
+               <mat-hint>
+                 <span [hidden]="!(formErrors.name)">
+                   {{formErrors.name}}</span>
+               </mat-hint>
+             </mat-input-container>
+            </div>
+            <div class="measurement-input">
+              <mat-input-container dividerColor="{{(formErrors.measurment) ? 'warn' : 'primary'}}">
+               <input matInput formControlName="measurment" placeholder="Measurment" type="number" pattern="[0-9]*" required>
+               <mat-hint>
+                 <span [hidden]="!(formErrors.measurment)">
+                   {{formErrors.measurment}}</span>
+               </mat-hint>
+             </mat-input-container>
+            </div>
+            <div class="measurement-message">
+              <mat-input-container 
+              ngClass.lg="measurement-width-lg"
+              ngClass.md="measurement-width-md"
+              ngClass.sm="measurement-width-sm">
+                <textarea matInput formControlName="message" placeholder="Your Message" rows=8></textarea>
+              </mat-input-container>
+            </div>
+            <mat-dialog-actions>
+              <button  [disabled]="createActionForm.invalid" type="submit"  mat-button class="back-button" (click)="onCloseConfirm()">Confirm</button>
+              <button mat-button class="back-button" (click)="onCloseCancel()">Cancel</button>
+            </mat-dialog-actions>
+        </form>
+    </div>
+  </mat-dialog-content>
+</div>

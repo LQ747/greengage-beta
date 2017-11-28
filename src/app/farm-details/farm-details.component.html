@@ -1,55 +1,270 @@
-<div class="container" 
-    fxLayout
-    fxLayout.xs="column"
-    fxLayoutAlign="center"
-    fxLayoutGap="10px"
-    fxLayoutGap.xs="0">
+<div class="flex-container" fxLayout="row" 
+ ngClass.gt-lg="page-padding-lg" 
+ ngClass.lg="page-padding-lg" 
+ ngClass.md="page-padding-md" 
+ ngClass.sm="page-padding-sm" fxLayoutAlign="space-between strach" *ngIf="farm">
 
-    <div fxFlex="100%">
-        <mat-card class=".mat-card1">
-            <mat-card-title>Pilicari</mat-card-title>
-        </mat-card>
+    <!-- Header -->
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="farm">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">{{farm.msg}}</h1>
+            <small>List of all farms registered in Greengage application with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <img class="header-icons"  src="./assets/images/farmWhite.png">
+        </div>  
     </div>
-    <div class="center" [hidden]="farm || errMess">
-        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
-      </div>
-      <div *ngIf="errmess" >
-        <h2>Error</h2>
-        <h4>{{errmess}}</h4>
-      </div>
-</div>
-<div class="container"
-    fxLayout
-    fxLayout.xs="column"
-    fxLayoutAlign="right"
-    fxLayoutGap="10px"
-    fxLayoutGap.xs="0">
 
+        <!-- Farm Details -->
+        <div fxFlex="100" class="flex-container" fxLayout="row" *ngIf="farm" fxLayoutAlign="start none"  >
 
-        <div class="farmDetails" fxFlex="20%">
-            <mat-card>
-                <mat-list>
-                    <mat-list-item><i class="material-icons">store_mall_directory</i>&ensp;{{pilicari}}</mat-list-item>
-                    <mat-list-item>Devices</mat-list-item>
-                    <mat-list-item>Users</mat-list-item>
-                </mat-list>
-                <div class="backButton">
-                    <button mat-raised-button color="warn" (click)="goBack()">BACK</button>
+            <div fxFlex="50" class="flex-container sminka"
+            ngClass.gt-lg="info-div-lg"  
+            ngClass.lg="info-div-lg"
+            ngClass.md="info-div-md"  
+            ngClass.sm="info-div-sm" fxLayout="row">
+            <!-- Farm Name -->
+                <div fxFlex="100" 
+                ngClass.gt-lg="txt-margin-lg"
+                ngClass.lg="txt-margin-lg"
+                ngClass.md="txt-margin-md" 
+                ngClass.sm="txt-margin-sm">
+                    <div class="profil-details-icons"
+                    ngClass.gt-lg="profil-details-icons-lg"
+                    ngClass.lg="profil-details-icons-lg"
+                    ngClass.md="profil-details-icons-md"  
+                    ngClass.sm="profil-details-icons-sm" fxFlex="10" fxFlex.lg="8">
+                        <i class="small-icons material-icons">spellcheck</i>
+                    </div>
+                    <div fxFlex
+                    ngClass.gt-lg="text-div-lg" 
+                    ngClass.lg="text-div-lg" 
+                    ngClass.md="text-div-md" 
+                    ngClass.sm="text-div">
+                        <p ngClass.gt-lg="number-of-lg2"
+                            ngClass.lg="number-of-lg2"
+                            ngClass.md="number-of-sm" 
+                            ngClass.sm="number-of-sm">
+                            <b>Farm Name: </b> {{farm.farm.name}} </p>
+                    </div>
                 </div>
-            </mat-card>
+                <!-- Number of Users -->
+                <div fxFlex="100" 
+                ngClass.gt-lg="txt-margin-lg"
+                ngClass.lg="txt-margin-lg"
+                ngClass.md="txt-margin-md" 
+                ngClass.sm="txt-margin-sm">
+                    <div class="profil-details-icons"
+                    ngClass.gt-lg="profil-details-icons-lg"
+                    ngClass.lg="profil-details-icons-lg" 
+                    ngClass.md="profil-details-icons-md" 
+                    ngClass.sm="profil-details-icons-sm" fxFlex="10" fxFlex.lg="8">
+                        <i class="small-icons material-icons">group</i>
+                    </div>
+                    <div fxFlex
+                    ngClass.gt-lg="text-div-lg"  
+                    ngClass.lg="text-div-lg" 
+                    ngClass.md="text-div-md" 
+                    ngClass.sm="text-div">
+                        <p ngClass.gt-lg="number-of-lg"
+                            ngClass.lg="number-of-lg"
+                            ngClass.md="number-of-md" 
+                            ngClass.sm="number-of-sm" >
+                            <span [routerLink]="['/farmusers', farm.farm.id]" style="border-bottom:1px dotted"><b>Number of Users: 
+                                    <span class="numberOf"
+                                    ngClass.gt-lg="numberOf-lg" 
+                                    ngClass.lg="numberOf-lg" 
+                                    ngClass.md="numberOf-md" 
+                                    ngClass.sm="numberOf-sm">{{farm.farm.numberOfUsers}}</span></b></span></p>
+                    </div>
+                </div>
+                <!-- Number of Devices -->
+                <div fxFlex="100" 
+                ngClass.gt-lg="txt-margin-lg"
+                ngClass.lg="txt-margin-lg"
+                ngClass.md="txt-margin-md" 
+                ngClass.sm="txt-margin-sm">
+                    <div class="profil-details-icons"
+                    ngClass.gt-lg="profil-details-icons-lg"
+                    ngClass.lg="profil-details-icons-lg"  
+                    ngClass.md="profil-details-icons-md" 
+                    ngClass.sm="profil-details-icons-sm" fxFlex="10" fxFlex.lg="8">
+                        <i class="small-icons material-icons">router</i>
+                    </div>
+                    <div fxFlex 
+                    ngClass.gt-lg="text-div-lg" 
+                    ngClass.lg="text-div-lg" 
+                    ngClass.md="text-div-md" 
+                    ngClass.sm="text-div">
+                        <span>
+                            <p ngClass.gt-lg="number-of-lg"
+                                ngClass.lg="number-of-lg"
+                                ngClass.md="number-of-md" 
+                                ngClass.sm="number-of-sm" >
+                                <span [routerLink]="['/devicedetails', farm.farm.id]" style="border-bottom:1px dotted"><b>Number of Devices: 
+                                    <span class="numberOf"
+                                    ngClass.gt-lg="numberOf-lg" 
+                                    ngClass.lg="numberOf-lg" 
+                                    ngClass.md="numberOf-sm" 
+                                    ngClass.sm="numberOf-sm">{{farm.farm.deviceNumber}}</span></b></span>
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <!-- Events -->
+                <div fxFlex="100" 
+                ngClass.gt-lg="txt-margin-lg"
+                ngClass.lg="txt-margin-lg"
+                ngClass.md="txt-margin-md" 
+                ngClass.sm="txt-margin-sm">
+                    <div class="profil-details-icons"
+                    ngClass.gt-lg="profil-details-icons-lg"
+                    ngClass.lg="profil-details-icons-lg"  
+                    ngClass.md="profil-details-icons-md" 
+                    ngClass.sm="profil-details-icons-sm" fxFlex="10" fxFlex.lg="8">
+                        <i class="small-icons material-icons">event_note</i>
+                    </div>
+                    <div fxFlex 
+                    ngClass.gt-lg="text-div-lg" 
+                    ngClass.lg="text-div-lg" 
+                    ngClass.md="text-div-md" 
+                    ngClass.sm="text-div">
+                        <span>
+                            <p ngClass.gt-lg="number-of-lg"
+                                ngClass.lg="number-of-lg"
+                                ngClass.md="number-of-md" 
+                                ngClass.sm="number-of-sm" >
+                                <span [routerLink]="['/farmevents', farm.farm.id]" style="border-bottom:1px dotted"><b>Events
+                                    <span class="numberOf"
+                                    ngClass.gt-lg="numberOf-lg" 
+                                    ngClass.lg="numberOf-lg" 
+                                    ngClass.md="numberOf-sm" 
+                                    ngClass.sm="numberOf-sm"></span></b></span>
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <!-- Device Measurement: -->
+                <div fxFlex="100" 
+                ngClass.gt-lg="txt-margin-lg"
+                ngClass.lg="txt-margin-lg"
+                ngClass.md="txt-margin-md" 
+                ngClass.sm="txt-margin-sm">
+                    <div class="profil-details-icons"
+                    ngClass.gt-lg="profil-details-icons-lg"
+                    ngClass.lg="profil-details-icons-lg"  
+                    ngClass.md="profil-details-icons-md" 
+                    ngClass.sm="profil-details-icons-sm" fxFlex="10" fxFlex.lg="8">
+                        <img class="mat-icon2" src="./assets/images/charts.png">
+                    </div>
+                    <div fxFlex 
+                    ngClass.gt-lg="text-div-lg" 
+                    ngClass.lg="text-div-lg" 
+                    ngClass.md="text-div-md" 
+                    ngClass.sm="text-div">
+                        <span>
+                            <p ngClass.gt-lg="number-of-lg"
+                                ngClass.lg="number-of-lg"
+                                ngClass.md="number-of-md" 
+                                ngClass.sm="number-of-sm" >
+                                <span [routerLink]="['/farmcharts', farm.farm.id]" style="border-bottom:1px dotted"><b>Device Measurement 
+                                    </b></span>
+                            </p>
+                        </span>
+                    </div>
+                </div>
         </div>
 
-        <div fxFlex>
-            <div class="maps" fxFlex fxFlexOffset="500px" fxFlexOffset.xs="0">
-                <mat-card class=".mat-card1">
-                    <mat-card-header class="header">
-                        <img mat-card-avatar src="./assets/images/MapsLogo.png">
-                    </mat-card-header>
-                    <img mat-card-image src="./assets/images/map.png">
-                </mat-card>
+        <!-- Temperatura -->
+        <div fxFlex class="sminka temp-text" 
+        ngClass.gt-lg="temp-text-lg"
+        ngClass.lg="temp-text-lg" 
+        ngClass.md="temp-text-md" 
+        ngClass.sm="temp-text-sm">
+            <div ngClass.lg="monitoring-lg">
+                <p> 
+                    Temperature threshold:
+                    <span ngClass.gt-lg="current-temp-lg"
+                    ngClass.lg="current-temp-lg" 
+                    ngClass.md="current-temp-md" 
+                    ngClass.sm="current-temp-sm" *ngIf="farm.farm.action" ><b>{{action.measurment}} C</b></span>
+                </p>
+            </div>
+           <!-- Set New Alarm  -->
+            <div fxLayout="row" class="div-aligne"  ngClass.lg="div-aligne-lg" >
+                <div ngClass.gt-lg="measurement-lg"
+                ngClass.lg="measurement-lg" 
+                ngClass.md="measurement-md" 
+                ngClass.sm="measurement-sm">
+                    <p>
+                            Set new alarm:
+                    </p>
+                </div>
+                <div>
+                    <button mat-button [routerLink]="['/tempalarm', farm.farm.id]" class="temp back-button" 
+                    ngClass.gt-lg="temp-lg"
+                    ngClass.lg="temp-lg" 
+                    ngClass.md="temp-md" 
+                    ngClass.sm="temp-sm" type="submit">
+                        <i class="icon-large material-icons">alarm_add</i>
+                    </button>
+                </div>
+            </div>
+             <!-- View existing alarm  -->
+            <div fxLayout="row" ngClass.md="measurement-margin">
+                <div ngClass.gt-lg="measurement-lg"
+                ngClass.lg="measurement-lg" 
+                ngClass.md="measurement-sm" 
+                ngClass.sm="measurement-sm">
+                    <p>
+                        View existing alarms:
+                    </p>
+                </div>
+                <div>
+                    <button mat-button [routerLink]="['/tempalarm', farm.farm.id]" class="temp back-button" 
+                    ngClass.gt-lg="temp-lg"
+                    ngClass.lg="temp-lg2" 
+                    ngClass.md="temp-md2" 
+                    ngClass.sm="temp-sm2" type="submit">
+                        <i class="icon-large material-icons">alarm_on</i>
+                    </button>
+                </div>
             </div>
         </div>
+
+
+    </div>
+
+    <!-- Map card -->
+    <div fxFlex="100"
+    class="map-div">
+        <div fxFlex class="cards3">
+            <mat-card class="cards1" ngClass.lg="cards1-lg">
+                <mat-card-header>
+                    <img mat-card-avatar 
+                    ngClass.gt-lg="mat-card-avatar-lg" 
+                    ngClass.lg="mat-card-avatar-lg" 
+                    ngClass.md="mat-card-avatar-md"
+                    ngClass.sm="mat-card-avatar-sm" src="./assets/images/MapsLogo.png">
+                </mat-card-header>
+                <agm-map 
+                ngClass.gt-lg="maps-lg"
+                ngClass.lg="maps-lg"
+                ngClass.md="maps-md"
+                ngClass.sm="maps-sm"
+                 [latitude]="lat" [longitude]="lng" [zoom]="zoomIn">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                      </agm-map>
+            </mat-card>
+        </div>
+    </div>
+
+        <button mat-button class="back-button" (click)="goBack()">BACK</button>
+
+
+    <div class="center" [hidden]="farm || errMess">
+        <mat-progress-spinner style="margin:0 auto; position:absolute;
+            right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+    </div>
+
 </div>
-
-
-

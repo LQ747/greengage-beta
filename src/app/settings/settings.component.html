@@ -1,3 +1,194 @@
-<p>
-  settings works!
-</p>
+<div class="flex-container" fxLayout="row" 
+     ngClass.lg="page-padding-lg"
+     ngClass.gt-lg="page-padding-lg"
+     ngClass.gt-sm="page-padding-sm"
+     ngClass.sm="page-padding-sm">
+
+    <div fxFlex="100" fxLayout="row" class="example-container"
+         ngClass.lg="example-container-lg"
+         ngClass.gt-lg="example-container-lg"
+         ngClass.gt-sm="example-container-sm"
+         ngClass.sm="example-container-sm" *ngIf="userData">
+        <div fxFlex="50" class="example-header"
+             ngClass.lg="example-header-lg"
+             ngClass.gt-lg="example-header-lg"
+             ngClass.gt-sm="example-header-sm"
+             ngClass.sm="example-header-sm">
+            <h1 class="farmName"
+                ngClass.lg="farmName-lg"
+                ngClass.gt-lg="farmName-lg"
+                ngClass.gt-sm="farmName-sm"
+                ngClass.sm="farmName-sm">User Settings</h1>
+            <small>Set your personal info and settings.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+                <i class="material-icons header-icon">settings</i>
+            </div>
+    </div>
+
+
+    <div class="flex-container profil-img sminka" 
+         ngClass.lg="profil-img-lg sminka-lg" 
+         ngClass.gt-lg="profil-img-lg sminka-lg" 
+         ngClass.gt-sm="profil-img-sm sminka-sm"
+         ngClass.sm="profil-img-sm sminka-sm" fxFlex="100" fxLayout="row" *ngIf="userData">
+        <div fxFlex="22" class="icon-div" 
+             ngClass.lg="icon-div-lg" 
+             ngClass.gt-lg="icon-div-lg" 
+             ngClass.gt-sm="icon-div-sm" 
+             ngClass.sm="icon-div-sm">
+            <img class="icon" 
+                 ngClass.lg="icon-lg" 
+                 ngClass.gt-lg="icon-lg" 
+                 ngClass.gt-sm="icon-sm" 
+                 ngClass.sm="icon-sm" src="./assets/images/account-settings2.png">
+        </div>
+        <div fxFlex class="user" 
+             ngClass.lg="user-lg" 
+             ngClass.gt-lg="user-lg" 
+             ngClass.gt-sm="user-sm" 
+             ngClass.sm="user-sm" *ngIf="userData">
+            <div>
+                <p class="credentials-div" 
+                   ngClass.lg="credentials-div-lg" 
+                   ngClass.gt-lg="credentials-div-lg" 
+                   ngClass.gt-sm="credentials-div-sm" 
+                   ngClass.sm="credentials-div-sm">
+                    <b>First Name:</b> {{userData.user.firstName}}
+                </p>
+            </div>
+
+            <div>
+                <p class="credentials-div" 
+                   ngClass.lg="credentials-div-lg" 
+                   ngClass.gt-lg="credentials-div-lg" 
+                   ngClass.gt-sm="credentials-div-sm" 
+                   ngClass.sm="credentials-div-sm">
+                    <b>Last Name:</b> {{userData.user.lastName}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container" fxFlex fxLayout="row" fxLayoutAlign=" stretch">
+
+
+        <div fxFlex fxLayout="row" class="flex-container profil-details sminka" 
+             ngClass.lg="profil-details-lg sminka-lg" 
+             ngClass.gt-lg="profil-details-lg sminka-lg" 
+             ngClass.gt-sm="profil-details-sm sminka-sm"
+             ngClass.sm="profil-details-sm sminka-sm" fxLayoutAlign="start" *ngIf="userData">
+
+            <div fxLayout="row" class="flex-container">
+
+                <div fxFlex="100">
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm" fxFlex="4">
+                        <i class="material-icons small-icons">&#xE0BE;</i>
+                    </div>
+                    <div fxFlex="51">
+                        <p>
+                            <b>Email:</b> {{userData.user.email}}</p>
+                    </div>
+
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm"
+                        fxFlex="4">
+                        <i class="material-icons small-icons">&#xE0CD;</i>
+                    </div>
+                    <div fxFlex>
+                        <p>
+                            <b>Phone:</b> {{userData.user.phone}}</p>
+                    </div>
+                </div>
+
+                <div fxFlex="100">
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm"
+                        fxFlex="4">
+                        <i class="material-icons small-icons">&#xE0C3;</i>
+                    </div>
+                    <div fxFlex="51">
+                        <p>
+                            <b>ExportType:</b> {{userData.user.exportType}}</p>
+                    </div>
+
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm"
+                        fxFlex="4">
+                        <i class="material-icons small-icons">work</i>
+                    </div>
+                    <div fxFlex>
+                        <p>
+                            <b>Company: </b> {{userData.user.company}}</p>
+                    </div>
+                </div>
+
+                <div fxFlex="100">
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm"
+                        fxFlex="4">
+                        <i class="material-icons small-icons">&#xE54E;</i>
+                    </div>
+                    <div fxFlex="51">
+                        <p>
+                            <b>Role:</b> {{userData.user.role}}</p>
+                    </div>
+
+                    <div class="profil-details-icons" 
+                         ngClass.lg="profil-details-icons-lg" 
+                         ngClass.gt-lg="profil-details-icons-lg" 
+                         ngClass.gt-sm="profil-details-icons-sm" 
+                         ngClass.sm="profil-details-icons-sm"
+                         fxFlex="4">
+                        <i class="material-icons small-icons">&#xE88A;</i>
+                    </div>
+                    <div fxFlex>
+                        <p>
+                            <b>Farm: </b> {{userData.user.farm}}</p>
+                    </div>
+                </div>
+
+
+                <div class="profil-details-icons" 
+                     ngClass.lg="profil-details-icons-lg" 
+                     ngClass.gt-lg="profil-details-icons-lg" 
+                     ngClass.gt-sm="profil-details-icons-sm" 
+                     ngClass.sm="profil-details-icons-sm"
+                    fxFlex="4">
+                    <i class="material-icons small-icons">&#xE0C9;</i>
+                </div>
+                <div fxFlex="91">
+                    <p>
+                        <b>Message: </b> {{userData.user.message}} poprilicno dugacka poruka ne prelazi</p>
+                </div>
+                <div fxFlex></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="center" [hidden]="userData || errMess">
+        <mat-progress-spinner style="margin:0 auto; position:absolute;
+            right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+    </div>
+
+</div>

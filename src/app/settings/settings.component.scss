@@ -1,0 +1,448 @@
+  .header-icon1{
+      font-size: 5vw;
+  }
+
+  .example-container{
+    background-color: #4C9D2A;
+    color: white;
+    border: 1px solid #e4e5e7;
+    border-radius: 5px;
+
+  }
+
+
+// !!!!!!!!!!!!!!!! xl !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!! lg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+.page-padding-lg{
+    padding: 8.95313vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.icon-lg{
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e4e5e7;
+    height: 7vw; 
+    margin: 0.7vw;
+    margin-left: 2vw;
+}
+
+.credentials-div-lg{
+    margin-top: 1.7578125vw;
+    font-size: 1.43125vw;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a6c6f;
+}
+
+.profil-details-txt-lg{
+    color: #6a6c6f;
+    padding: 1.2vw;
+    padding-top: 1.4vw;
+    border: 1px solid #e4e5e7;
+    border-radius: 0.1953125vw;
+    height: 4.1vw;
+    margin-right: 1.441406vw;
+    
+}
+
+.profil-details-txt-lg h3{
+    font-size: 1.9vw;
+    line-height: 0.6;
+    font-weight: 400;
+    margin: auto; 
+}
+
+.profil-details-lg{
+    height: 16vw;;
+    padding-left: 1.953125vw;
+    padding-top: 1.7578125vw;
+}
+.profil-details-lg p{
+    color: #6a6c6f;
+    font-size: 1.28vw;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-top: 0.5vw;
+    
+}
+.profil-details-icons-lg{
+    color: #A2D45C;
+
+    // margin-right: 0.9765625vw;
+}
+
+
+.profil-temp-txt-lg{
+    height: 4.1vw;
+    background-color: black;
+    margin-right: 0px !important;
+    padding-left: 1.2vw;
+}
+.profil-temp-txt-lg h4{    
+    margin-top: 1.7578125vw;
+    font-size: 1.7vw;
+    line-height: 0.5;
+    font-weight: 400;
+    color: #6a6c6f;
+}
+
+.profil-temp-lg{
+    margin-right: 0px !important;
+    padding-left: 1.953125vw;
+}
+
+.profil-temp-lg p{    
+    font-size: 1.46875vw;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a6c6f;
+    margin-bottom: 0;
+}
+
+.sminka-lg{
+    margin-top: 1vw;
+    //margin-bottom: 0.48828125vw;
+}
+
+.example-container-lg{
+    padding: 1.53125vw;
+    margin-bottom: 0.441406vw;
+    font-size: 1.1vw;
+ 
+  }
+
+.flex-container-lg{
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.farmName-lg{
+    line-height: 1.1;
+    font-weight: 300;
+    margin:0;
+    margin-bottom: 0.48828125vw;
+}
+
+.button-icon-lg{
+    font-size: 5.90625vw !important;
+    margin-left: 3.4vw;
+}
+
+.material-icons-lg{
+    font-size: 2.4vw;
+}
+
+.info-divs-lg{
+    margin-left: 0.9765625vw;
+}
+
+.user-lg{
+    padding-top: 0.28vw;
+}
+
+.save-button-lg{
+    padding: 0;
+    text-align: left;
+    background-color: #efeded;
+    padding-left: 2.2vw;
+    color: #A2D45C;
+}
+
+
+// !!!!!!!!!!!!!!!! md !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// .icon-sm{
+//     border-radius: 50%;
+//     background-color: white;
+//     border: 1px solid #e4e5e7;
+//     height: 9.33203125vw; 
+//     margin: 0.7vw;
+//     margin-left: 2vw;
+// }
+
+// .credentials-div-sm{
+//     margin-top: 1.7578125vw;
+//     font-size: 1.953125vw;
+//     line-height: 1.1;
+//     font-weight: 400;
+//     color: #6a6c6f;
+// }
+
+// .profil-details-txt-sm{
+//     color: #6a6c6f;
+//     padding: 1.66015625vw;
+//     padding-left: 1.953125vw;
+//     border: 1px solid #e4e5e7;
+//     border-radius: 0.1953125vw;
+//     height: 5.46875vw;
+//     margin-right: 1.441406vw;
+    
+// }
+
+// .profil-details-txt-sm h3{
+//     font-size: 2.34375vw;
+//     line-height: 1.1;
+//     font-weight: 400;
+//     margin: auto; 
+// }
+
+// .profil-details-sm{
+//     height: 33.203125vw;
+//     padding-left: 1.953125vw;
+//     padding-top: 1.7578125vw;
+//     margin-right: 1.441406vw;
+// }
+// .profil-details-sm p{
+//     color: #6a6c6f;
+//     font-size: 1.83125vw;
+//     line-height: 1.1;
+//     font-weight: 400;
+    
+// }
+// .profil-details-icons-sm{
+//     color: #A2D45C;
+//     padding-top: 0.68359375vw; 
+//     margin-right: 0.9765625vw;
+// }
+
+
+// .profil-temp-txt-sm{
+//     height: 5.46875vw;
+//     background-color: black;
+//     margin-right: 0px !important;
+//     padding-left: 1.953125vw;
+// }
+// .profil-temp-txt-sm h4{    
+//     margin-top: 1.7578125vw;
+//     font-size: 2.346094vw;
+//     line-height: 1.1;
+//     font-weight: 400;
+//     color: #6a6c6f;
+// }
+
+// .profil-temp-sm{
+//     margin-right: 0px !important;
+//     padding-left: 1.953125vw;
+// }
+
+// .profil-temp-sm p{    
+//     margin-top: 1.7578125vw;
+//     font-size: 1.85546875vw;
+//     line-height: 1.1;
+//     font-weight: 400;
+//     color: #6a6c6f;
+// }
+
+// .sminka-sm{
+//     border: 1px solid #e4e5e7;
+//     border-radius: 0.1953125vw;
+//     background: #f6f6f6;
+//     margin-top: 1.46484375vw;
+//     //margin-bottom: 0.48828125vw;
+// }
+
+// .example-container-sm{
+//     padding: 1.953125vw;
+//     border-radius: 0.1953125vw;
+//     margin-bottom: 0.441406vw;
+ 
+//   }
+
+// .flex-container-sm{
+//     flex-wrap: wrap;
+//     display: -webkit-flex;
+//     -webkit-flex-wrap: wrap;
+//     -ms-flex-wrap: wrap;
+//     -webkit-flex-direction: row;
+//     -ms-flex-direction: row;
+//     flex-direction: row;
+// }
+
+// .farmName-sm{
+//     font-size: 2.9296875vw;
+//     line-height: 1.1;
+//     font-weight: 300;
+//     margin:0;
+//     margin-bottom: 0.48828125vw;
+// }
+
+// .mat-button-sm{
+//     color: #A2D45C;    
+// }
+// .button-icon-sm{
+//     font-size: 5.90625vw !important;
+// }
+
+// .material-icons-sm{
+//     font-size: 3.15625vw;
+// }
+
+// .info-divs-sm{
+//     margin-left: 0.9765625vw;
+// }
+
+// .user-sm{
+//     padding-top: 1.2vw;
+// }
+
+// .save-button-sm{
+//     padding: 0 !important;
+//     text-align: left;
+// }
+
+
+
+// !!!!!!!!!!!!!!!! sm !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.page-padding-sm{
+    padding: 1.953125vw;
+}
+
+.icon-sm{
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e4e5e7;
+    height: 12.73125vw; 
+    margin: 0.7vw;
+    margin-left: 2vw;
+}
+
+.credentials-div-sm{
+    margin-top: 1.7578125vw;
+    font-size: 2.53125vw;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a6c6f;
+}
+
+.profil-details-txt-sm{
+    color: #6a6c6f;
+    padding: 1.66015625vw;
+    padding-left: 1.953125vw;
+    border: 1px solid #e4e5e7;
+    border-radius: 0.1953125vw;
+    height: 5.46875vw;
+    margin-right: 1.441406vw;
+    
+}
+
+.profil-details-txt-sm h3{
+    font-size: 2.34375vw;
+    line-height: 1.1;
+    font-weight: 400;
+    margin: auto; 
+}
+
+.profil-details-sm{
+    height: 33.203125vw;
+    padding-left: 1.953125vw;
+    padding-top: 1.7578125vw;
+
+}
+.profil-details-sm p{
+    color: #6a6c6f;
+    font-size: 2.125vw;
+    line-height: 1.1;
+    font-weight: 400;
+    
+}
+.profil-details-icons-sm{
+    color: #6a6c6f;
+    padding-top: 0.68359375vw; 
+    margin-right: 1.3765625vw;
+}
+
+
+.profil-temp-txt-sm{
+    height: 5.46875vw;
+    background-color: black;
+    margin-right: 0px !important;
+    padding-left: 1.953125vw;
+}
+.profil-temp-txt-sm h4{    
+    margin-top: 1.7578125vw;
+    font-size: 2.346094vw;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a6c6f;
+}
+
+.profil-temp-sm{
+    margin-right: 0px !important;
+    padding-left: 1.953125vw;
+}
+
+.profil-temp-sm p{    
+    margin-top: 1.7578125vw;
+    font-size: 1.85546875vw;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a6c6f;
+}
+
+.sminka-sm{
+    margin-top: 1.46484375vw;
+    //margin-bottom: 0.48828125vw;
+}
+
+.example-container-sm{
+    padding: 1.953125vw;
+    margin-bottom: 0.441406vw;
+  }
+
+.flex-container-sm{
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.farmName-sm{
+
+    line-height: 1.1;
+    font-weight: 300;
+    margin:0;
+    margin-bottom: 0.48828125vw;
+}
+
+
+.button-icon-sm{
+    font-size: 5.90625vw !important;
+    
+}
+
+
+.info-divs-sm{
+    margin-left: 0.9765625vw;
+}
+
+.user-sm{
+    padding-top: 1.2vw;
+}
+
+.save-button-sm{
+    padding: 0 ;
+    text-align: left;
+    background-color: #efeded;
+    padding-left: 4.8vw;
+    color: #A2D45C;
+    
+}
+
+.material-icons-sm{
+        font-size: 4.15625vw;
+    }

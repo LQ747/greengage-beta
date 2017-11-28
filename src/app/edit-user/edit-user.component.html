@@ -1,0 +1,118 @@
+<div ngClass.gt-lg="login-form-lg" 
+ ngClass.lg="login-form-lg" 
+ ngClass.md="login-form-md"  
+ ngClass.sm="login-form-sm">
+ <div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between none" >
+    <h2>Edit User</h2>
+    <i class="material-icons icon-margin">edit</i>
+  </div>
+  
+  <mat-dialog-content  *ngIf="userData" 
+  ngClass.gt-lg="form-dimensions-lg" 
+  ngClass.lg="form-dimensions-lg" 
+  ngClass.md="form-dimensions-md" 
+  ngClass.sm="form-dimensions-sm">
+    <div fxFlex class="form-size">
+      <form novalidate [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <p>
+          <img class="icon-margin" src="./assets/images/account-settings.png">
+          <mat-input-container class="input-margin" 
+          ngClass.gt-lg="half-width-lg"
+          ngClass.lg="half-width-lg"
+          ngClass.md="half-width-md"
+          ngClass.sm="half-width-sm"
+          dividerColor="{{(formErrors.firstName) ? 'warn' : 'primary'}}">
+          <input matInput formControlName="firstName" placeholder="{{userData.user.firstName}}" type="text">
+           <mat-hint>
+             <span [hidden]="!(formErrors.firstName)">
+               {{formErrors.firstName}}</span>
+           </mat-hint>
+         </mat-input-container>
+         <img class="icon-margin icon2-margin" src="./assets/images/account-settings.png">
+          <mat-input-container ngClass.gt-lg="half-width-lg"
+          ngClass.lg="half-width-lg"
+          ngClass.md="half-width-md"
+          ngClass.sm="half-width-sm"
+          dividerColor="{{(formErrors.lastName) ? 'warn' : 'primary'}}">
+         <input matInput formControlName="lastName" placeholder="{{userData.user.lastName}}" type="text">
+           <mat-hint>
+             <span [hidden]="!(formErrors.lastName)">
+               {{formErrors.lastName}}</span>
+           </mat-hint>
+         </mat-input-container>
+        </p>
+        <p>
+          <i class="material-icons small-icons icon-margin">&#xE0CD;</i>
+          <mat-input-container class="input-margin"
+          ngClass.gt-lg="half-width-lg"
+          ngClass.lg="half-width-lg"
+          ngClass.md="half-width-md"
+          ngClass.sm="half-width-sm"
+          dividerColor="{{(formErrors.phone) ? 'warn' : 'primary'}}">
+         <input matInput formControlName="phone" placeholder="{{userData.user.phone}}" type="tel" pattern="[0-14]*">
+           <mat-hint>
+             <span [hidden]="!(formErrors.phone)">
+               {{formErrors.measurment}}</span>
+           </mat-hint>
+         </mat-input-container>
+         <i class="material-icons small-icons icon-margin icon2-margin">&#xE0BE;</i>
+          <mat-input-container  ngClass.gt-lg="half-width-lg"
+          ngClass.lg="half-width-lg"
+          ngClass.md="half-width-md"
+          ngClass.sm="half-width-sm"
+          dividerColor="{{(formErrors.email) ? 'warn' : 'primary'}}">
+         <input matInput formControlName="email" placeholder="{{userData.user.email}}" type="email">
+           <mat-hint>
+             <span [hidden]="!(formErrors.email)">
+               {{formErrors.measurment}}</span>
+           </mat-hint>
+         </mat-input-container>
+        </p>
+                
+        <div class="flex-container" fxLayout="row" >
+
+            <div fxFlex.lg="5" fxFlex.md="6" fxFlex.sm="8" class="form-icons-div">
+                <mat-icon matPrefix class="form-icons">swap_vert</mat-icon>
+            </div>
+
+          <div class="my-container" fxFlex="44">
+              <!-- <div class="form-option3">
+                  <p></p>
+              </div> -->
+              <div  class="form-option2">    
+                <mat-form-field [color]="primary">
+                  <mat-select multiple >
+                    <mat-option *ngFor="let action of actions" [value]="action.value">
+                      {{ action.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>ExportType</mat-hint>
+                  <mat-error>You must make a selection</mat-error>
+                </mat-form-field>
+              </div>
+          </div>
+
+          <div class="my-container" fxFlex>
+            <div>
+                <i class="material-icons small-icons message-icon">message</i>
+            </div>
+            <div class="message-div">
+              <mat-input-container class="full-width" ngClass.sm="full-width-sm">
+                  <textarea matInput formControlName="message" placeholder="Message: " rows=7></textarea>
+                </mat-input-container>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <mat-dialog-actions>
+          <button type="button" mat-button class="back-button" (click)="onCloseConfirm()">Confirm</button>
+         <button mat-button class="back-button" (click)="onCloseCancel()">Cancel</button>
+       </mat-dialog-actions>
+      </form>
+    </div>
+  </mat-dialog-content>
+</div>
+
+

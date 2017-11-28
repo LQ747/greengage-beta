@@ -1,0 +1,54 @@
+<div class="flex-container" ngClass.lg="container-padding-lg" ngClass.md="container-padding-sm" ngClass.sm="container-padding-sm" fxLayout="column">
+
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="companyFarmsData">
+        <div fxFlex="73" class="example-header">
+            <h2 class="farmName">Farms in {{companyFarmsData.msg}} Company</h2>
+            <small>List of all farms registered in {{companyFarmsData.msg}} company with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <img class="header-icons"  src="./assets/images/farmWhite.png">
+        </div>
+    </div>
+
+    <div fxFlex="100" class="table-div" *ngIf="companyFarmsData">
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+                <tr>
+                    <th>Farm Name</th>
+                    <th>Locaton</th>
+                    <th>View Details</th>
+                    <th>Chart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let farm of companyFarmsData.farms">
+                    <td>{{farm.name}}</td>
+                    <td>{{farm.Farmlocation}}</td>
+                    <td>
+                        <button mat-button color="primary" [routerLink]="['/farmdetails', farm.id]">
+                            <i class="material-icons small-icons">pageview</i>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-button [routerLink]="['/farmcharts', farm.id]">
+                            <img class="mat-icon2" src="./assets/images/charts.png">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div *ngIf="companyFarmsData">
+        <button mat-button class="back-button" (click)="goBack()">BACK</button>
+    </div>
+    <div class="center" [hidden]="companyFarmsData || errMess">
+        <mat-progress-spinner style="margin:0 auto; position:absolute;
+                    right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="flex-container" fxLayout="row"
+ ngClass.gt-lg="container-padding-lg" 
+ ngClass.lg="container-padding-lg"
+ ngClass.md="container-padding-md"
+ ngClass.sm="container-padding-sm" fxLayoutAlign="space-between strach" *ngIf="eventObj">
+
+
+
+<div class="events-div" 
+ ngClass.gt-lg="events-div-lg" 
+ ngClass.lg="events-div-lg" 
+ ngClass.md="events-div-md"  
+ ngClass.sm="events-div-sm">
+
+
+
+
+<div class="scroll-container" drag-scroll>
+       <div class="scroll">
+               <div fxFlex="100" *ngIf="eventObj">
+                       
+                               <div fxLayout="row" *ngFor="let event of eventObj.events; let index=index; let odd=odd; let even=even;"
+                               [ngClass]="{ odd: odd, even: even }"
+                               [ngClass.sm]="{ 'odd-sm odd': odd, 'even-sm even': even }"
+                               [ngClass.md]="{ 'odd-md odd': odd, 'even-md even': even }"
+                               [ngClass.lg]="{ 'odd-lg odd': odd, 'even-lg even': even }"
+                               [ngClass.gt-lg]="{ 'odd-lg odd': odd, 'even-lg even': even }"
+                               class="event-container" >
+                       
+                                   <div ngClass.lg="event-name-lg" 
+                                   ngClass.md="event-name-md" 
+                                   ngClass.sm="event-name-sm" fxFlex="35">
+                                       <p>{{event.name}}</p>
+                                   </div>
+                                   <div ngClass.lg="event-date-lg" 
+                                   ngClass.md="event-date-md" 
+                                   ngClass.sm="event-date-sm" fxFlex="35">
+                                       <p>
+                                           <b>Date: </b>{{event.date}}</p>
+                                   </div>
+                                   <div ngClass.lg="event-record-lg" 
+                                   ngClass.md="event-record-md" 
+                                   ngClass.sm="event-record-sm" fxFlex>
+                                       <p>
+                                           <b>recorded by: </b>{{event.recordedBy}}</p>
+                                   </div>
+                                   <div ngClass.lg="event-text-lg" 
+                                   ngClass.md="event-text-md" 
+                                   ngClass.sm="event-text-sm" fxFlex="75">
+                                       <p>{{event.description}}</p>
+                                   </div>
+                                   <div ngClass.lg="event-img-lg" 
+                                   ngClass.md="event-img-md"  
+                                   ngClass.sm="event-img-sm" fxFlex>
+                                       <i class="material-icons"
+                                       ngClass.lg="img-odd-even-lg" 
+                                       ngClass.md="img-odd-even-md" 
+                                       ngClass.sm="img-odd-even-sm">linked_camera</i>
+                                   </div>
+                               </div>
+                           </div>
+       </div>
+</div>
+
+
+
+
+   
+
+   </div>
+
+<div class="center" [hidden]="eventObj || errMess">
+     <mat-progress-spinner style="margin:0 auto; position:absolute;
+     right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>
+<div ngClass.sm="center" ngClass.lg="center-lg" [hidden]="eventObj || errMess">
+   <mat-progress-spinner style="margin:0 auto; position:absolute;
+   right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+</div>
+</div>

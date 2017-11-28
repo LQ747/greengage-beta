@@ -11,8 +11,8 @@ import 'rxjs/add/observable/fromEvent';
 
 import { IUsers } from '../shared/IUsers';
 import { IUser } from '../shared/IUser';
-import { USERS } from '../shared/usersData';
 import { UserTableServiceService } from '../services/user-table-service.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-users-table',
@@ -22,19 +22,18 @@ import { UserTableServiceService } from '../services/user-table-service.service'
 
 export class UsersTableComponent implements OnInit {
   displayedColumns = ['userName', 'phone', 'email', 'message', 'exportType', 'role'];
-  users: string[];
-  exampleDatabase: ExampleDatabase;
+  usersNames: ["Luka","Djole","Mirko","Nebojsa","Arnold"];
+  exampleDatabase = new ExampleDatabase(this.usersNames);
   dataSource: ExampleDataSource | null;
 
-  constructor(private userTableServiceService: UserTableServiceService) {
+  constructor(private userService : UserService) {
+  console.log(this.usersNames);
+  
   }
 
   @ViewChild('filter') filter: ElementRef;
 
   ngOnInit() {
-   this.users = this.userTableServiceService.getUsersName();
-    this.exampleDatabase = new ExampleDatabase(this.users);
-    // console.log(this.users);
 
     this.dataSource = new ExampleDataSource(this.exampleDatabase);
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
@@ -46,8 +45,6 @@ export class UsersTableComponent implements OnInit {
         });
   }
 }
-
-
 
 /** Constants used to fill up our data base. */
 
@@ -77,6 +74,8 @@ export class ExampleDatabase {
   constructor(users: string[]) {
     // Fill up the database with 100 users.
     this.userArray = users;
+    console.log(this.userArray);
+    
     for (let i = 0; i < this.userArray.length; i++) { this.addUser(); }
 
   }
@@ -96,7 +95,7 @@ export class ExampleDatabase {
 
      const name =
          this.userArray[ 0 ];
-    //     this.colors[Math.round(Math.random() * (this.colors.length - 1))].charAt(0) + '.';
+        //  this.colors[Math.round(Math.random() * (this.colors.length - 1))].charAt(0) + '.';
 
     return {
       name: name,

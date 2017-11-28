@@ -1,6 +1,12 @@
-mat-card-title{
-    text-align: center;
+
+table.dataTable {
+  color: black;
+
 }
-.mat-list-icon {
-    color: rgba(0, 0, 0, 0.54);
-  }
+td{
+  text-align: center;
+}
+
+.dataTables_length{
+  margin-bottom: 10px;
+}

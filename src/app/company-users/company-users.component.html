@@ -1,0 +1,52 @@
+<div class="flex-container"
+     ngClass.lg="container-padding-lg"
+     ngClass.md="container-padding-sm"
+     ngClass.sm="container-padding-sm" fxLayout="column">
+
+    <div fxFlex="100" fxLayout="row" class="example-container component-text" *ngIf="usersData">
+        <div fxFlex="73" class="example-header">
+            <h1 class="farmName">Users in {{usersData.msg}} Company</h1>
+            <small>List of all users registered in {{usersData.msg}} company with basic details.</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+                <img class="header-icons"  src="./assets/images/folder-account.png">
+            </div>
+    </div>
+
+    <div fxFlex class="table-div" *ngIf="usersData">
+        <table id="example" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>View Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersData.users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+                        <button mat-button [routerLink]="['/userdetails', user.id]">
+                            <i class="material-icons small-icons">pageview</i>
+                        </button>
+                        <button mat-button (click)="showAlert(user)">
+                            <i class="material-icons small-icons">delete_forever</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="usersData">
+        <button mat-button class="back-button" (click)="goBack()">BACK</button>
+    </div>
+    <div class="center" [hidden]="usersData || errMess">
+        <mat-progress-spinner style="margin:0 auto; position:absolute;
+            right:50%;top:50%;" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+    </div>
+</div>

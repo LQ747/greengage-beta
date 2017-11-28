@@ -1,0 +1,51 @@
+<div class="flex-container" fxLayout="row" fxLayoutAlign="space-around none">
+    <!-- Logo -->
+    <div class="logo" ngClass.gt-lg="logo-lg" ngClass.lg="logo-lg" ngClass.md="logo-md" ngClass.sm="logo-sm">
+        <img class="logo-size" src="/assets/images/GGL-Larger-Trans-Logo.png" alt="logo">
+    </div>
+
+    <!-- Menu -->
+    <div class="flex-container" fxLayout="row">
+
+        <div class="user-icon-div" > 
+            <button mat-button  *ngIf="userData">
+                <img  [routerLink]="['/usergraphs']" class="mat-icon user-img2" src="./assets/images/chartWhite.png">
+            </button>
+            <p>GRAPHS</p>
+        </div>
+
+        <div class="user-icon-div"> 
+            <button mat-button  routerLink="/userevents">
+                <i class="user-icons material-icons">event</i>
+            </button>
+            <p>EVENTS</p>
+        </div>
+
+        <div class="user-icon-div"> 
+            <button mat-button  routerLink="/useralarms">
+                <i class="user-icons material-icons">access_alarms</i>
+            </button>
+
+            <p>ALARMS</p>
+        </div>
+
+        <div class="user-icon-div" *ngIf="userData"> 
+            <button mat-button>
+                <img  [routerLink]="['/yourFarm']" class="mat-icon user-img" src="./assets/images/farm2White.png">
+            </button>
+            <p>FARM</p>
+        </div>
+
+        <div class="user-icon-div"> 
+            <button mat-button  routerLink="/usersettings">
+                <i class="user-icons material-icons">settings</i>
+            </button>
+            <p>SETTINGS</p>
+        </div>
+    </div>
+
+    <!-- <div fxFlex="100" class="logout-button-div">
+            <button type="submit" mat-button class="background-primary mat-button-logout" ngClass.lg="logout-button-lg" ngClass.md="logout-button-md" ngClass.sm="logout-button-sm">Logout</button>
+    </div> -->
+
+</div>

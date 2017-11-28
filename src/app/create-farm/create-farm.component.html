@@ -1,0 +1,120 @@
+<div ngClass.gt-lg="login-form-lg"
+ ngClass.lg="login-form-lg" 
+ ngClass.md="login-form-md" 
+ ngClass.sm="login-form-sm">
+
+  <div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between none">
+    <h2>Create new Farm</h2>
+    <i class="material-icons margin">edit</i>
+  </div>
+
+  <mat-dialog-content ngClass.gt-lg="form-dimensions-gt-lg" 
+  ngClass.lg="form-dimensions-lg" 
+  ngClass.md="form-dimensions-md" 
+  ngClass.sm="form-dimensions-sm">
+    <div fxFlex class="form-size"
+    ngClass.gt-lg="form-size-lg"
+    ngClass.lg="form-size-lg"
+    ngClass.md="form-size-md"
+    ngClass.sm="form-size-sm">
+      <form class="flex-container" novalidate [formGroup]="createFarm" (ngSubmit)="onSubmit()">
+       
+        <div fxFlex="45" class="wrap-icon">
+            <img class="mat-icon" src="./assets/images/farm.png">
+            <mat-input-container class="half-width mat-icon-float" dividerColor="{{(formErrors.houseName) ? 'warn' : 'primary'}}">  
+            <input matInput formControlName="houseName" placeholder="House Name" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.houseName)">
+                {{formErrors.houseName}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="45" class="wrap-icon"
+        ngClass.gt-lg="icon-margin-gt-lg"
+        ngClass.lg="icon-margin-lg"
+        ngClass.md="icon-margin-md"
+        ngClass.sm="icon-margin-sm">
+            <img class="mat-icon" src="./assets/images/forms/satellite-in-orbit-filled.png">
+          <mat-input-container class="half-width" dividerColor="{{(formErrors.location) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="location" placeholder="Location" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.location)">
+                {{formErrors.location}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="45" class="wrap-icon">
+            <img class="mat-icon" src="./assets/images/forms/latitude-filled.png">
+          <mat-input-container class="half-width" dividerColor="{{(formErrors.latitude) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="latitude" placeholder="Latitude" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.latitude)">
+                {{formErrors.latitude}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="45" class="wrap-icon"
+        ngClass.gt-lg="icon-margin-gt-lg"
+        ngClass.lg="icon-margin-lg"
+        ngClass.md="icon-margin-md"
+        ngClass.sm="icon-margin-sm">
+            <img class="mat-icon" src="./assets/images/forms/longitude-filled.png">
+          <mat-input-container class="half-width" dividerColor="{{(formErrors.longitude) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="longitude" placeholder="Longitude" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.longitude)">
+                {{formErrors.longitude}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="45" class="wrap-icon">
+          <img class="mat-icon" src="./assets/images/forms/depth-filled.png">
+          <mat-input-container class="half-width" dividerColor="{{(formErrors.length) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="length" placeholder="Length" type="number" pattern="[0-9]*" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.length)">
+                {{formErrors.length}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="45" class="wrap-icon"
+        ngClass.gt-lg="icon-margin-gt-lg"
+        ngClass.lg="icon-margin-lg"
+        ngClass.md="icon-margin-md"
+        ngClass.sm="icon-margin-sm">
+        <img class="mat-icon" src="./assets/images/forms/width-filled.png">
+          <mat-input-container class="half-width" dividerColor="{{(formErrors.width) ? 'warn' : 'primary'}}">
+            <input matInput formControlName="width" placeholder="Width" type="number" pattern="[0-9]*" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.width)">
+                {{formErrors.width}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+
+        <div fxFlex="100" class="wrap-icon">
+            <i class="material-icons mat-icon">date_range</i>
+          <mat-input-container class="half-width2" dividerColor="{{(formErrors.key_dates) ? 'warn' : 'primary'}}"> 
+            <input matInput formControlName="key_dates" placeholder="Key dates" type="text" required>
+            <mat-hint>
+              <span [hidden]="!(formErrors.key_dates)">
+                {{formErrors.key_dates}}</span>
+            </mat-hint>
+          </mat-input-container>
+        </div>
+        <mat-dialog-actions ngClass.gt-lg="buttons-gt-lg"
+        ngClass.lg="buttons-lg"
+        ngClass.md="buttons-md"
+        ngClass.sm="buttons-sm">
+          <button [disabled]="createFarm.invalid"   type="submit" mat-button class="back-button">Confirm</button>
+          <button mat-button class="back-button" (click)="goBack()">BACK</button>
+        </mat-dialog-actions>
+      </form>
+    </div>
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,48 @@
+<div class="flex-container login-container">
+    <div class="flex-container sinein-container mat-elevation-z8"
+    ngClass.gt-lg="form-gt-lg"
+    ngClass.lg="form-lg"
+    ngClass.md="form-md"
+    ngClass.sm="form-sm">
+
+        <div class="flex-container" fxLayout="row" >
+            <div class="logo" ngClass.gt-lg="logo-lg" ngClass.lg="logo-lg" ngClass.md="logo-md" ngClass.sm="logo-sm">
+                <img src="/assets/images/GGL-Larger-Trans-Logo.png" alt="logo">
+            </div>
+            <div fxFlex class="form-size">
+
+
+            
+
+                <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                    
+                    <mat-input-container floatPlaceholder="never" class="full-width" dividerColor="{{formErrors.email ? 'warn':'primary'}}">
+                        <input class="myinput"
+                        matInput formControlName="email" placeholder="Email" type="email" required>
+                        <mat-hint>
+                        <span [hidden]="!(formErrors.email)">{{formErrors.email}}</span>
+                        </mat-hint>
+                    </mat-input-container>
+                
+                    <mat-input-container floatPlaceholder="never" class="full-width">
+                        <input class="myinput" matInput formControlName="password" placeholder="Password" type="password" required>
+                    </mat-input-container>
+                    
+                    <div class="checkbox">
+                        <div class="icheckbox_square-green checked" style="position: relative;">
+                            <mat-checkbox class="checkbox checkbox-info checkbox-circle">Remember Login</mat-checkbox>
+                        </div>
+                        <p class="help-block small">(if this is a private computer)
+                    </div>
+                    <mat-dialog-actions>
+                    <button [disabled]="feedbackForm.invalid" type="submit"  mat-button class="background-primary">LOGIN</button>
+                    </mat-dialog-actions>
+                    <div class="password-forgot">
+                        <a href="">Forgot your password?</a>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    
+</div>
+</div>
