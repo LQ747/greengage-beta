@@ -1,0 +1,1 @@
+export const baseURL = "http://seebo-farms.app/api/"

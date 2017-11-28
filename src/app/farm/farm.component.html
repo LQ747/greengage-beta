@@ -1,0 +1,18 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+    <div *ngIf="data">
+        <mat-list-item *ngFor="let farm of data.farms" [routerLink]="['/farmdetails', farm.id]">
+            <a>{{farm.name}}</a>
+        </mat-list-item>
+    </div>
+    <div class="center" [hidden]="data || errMess">
+        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,67 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-header">
+    <mat-form-field floatPlaceholder="never">
+      <input matInput #filter placeholder="Filter users">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- ID Column -->
+    <ng-container  matColumnDef="userId">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Country Column -->
+    <ng-container matColumnDef="country">
+      <mat-header-cell *matHeaderCellDef> Country </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.country}} </mat-cell>
+    </ng-container>
+
+    <!-- Farms Column -->
+    <ng-container matColumnDef="farms">
+      <mat-header-cell *matHeaderCellDef> Farms </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.farms}} </mat-cell>
+    </ng-container>
+
+     <!-- Number Of Sensors Column -->
+     <ng-container matColumnDef="numOfSensors">
+      <mat-header-cell *matHeaderCellDef> Number Of Sensors </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.numOfSensors}} </mat-cell>
+    </ng-container>
+
+     <!-- Number of Users Column -->
+     <ng-container matColumnDef="numOfUsers">
+      <mat-header-cell *matHeaderCellDef> Number of Users </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.numOfUsers}} </mat-cell>
+    </ng-container>
+
+    <!-- Admin Column -->
+    <ng-container matColumnDef="admin">
+      <mat-header-cell *matHeaderCellDef> Admins </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.admins}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column 
+    <ng-container matColumnDef="progress">
+      <mat-header-cell *matHeaderCellDef> Progress </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+    </ng-container> -->
+
+     <!-- Color Column 
+    <ng-container matColumnDef="color">
+      <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+    </ng-container> -->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

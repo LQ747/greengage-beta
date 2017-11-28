@@ -1,0 +1,55 @@
+<div class="container" 
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+
+    <div fxFlex="100%">
+        <mat-card class=".mat-card1">
+            <mat-card-title>Pilicari</mat-card-title>
+        </mat-card>
+    </div>
+    <div class="center" [hidden]="farm || errMess">
+        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+      </div>
+      <div *ngIf="errmess" >
+        <h2>Error</h2>
+        <h4>{{errmess}}</h4>
+      </div>
+</div>
+<div class="container"
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="right"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+
+
+        <div class="farmDetails" fxFlex="20%">
+            <mat-card>
+                <mat-list>
+                    <mat-list-item><i class="material-icons">store_mall_directory</i>&ensp;{{pilicari}}</mat-list-item>
+                    <mat-list-item>Devices</mat-list-item>
+                    <mat-list-item>Users</mat-list-item>
+                </mat-list>
+                <div class="backButton">
+                    <button mat-raised-button color="warn" (click)="goBack()">BACK</button>
+                </div>
+            </mat-card>
+        </div>
+
+        <div fxFlex>
+            <div class="maps" fxFlex fxFlexOffset="500px" fxFlexOffset.xs="0">
+                <mat-card class=".mat-card1">
+                    <mat-card-header class="header">
+                        <img mat-card-avatar src="./assets/images/MapsLogo.png">
+                    </mat-card-header>
+                    <img mat-card-image src="./assets/images/map.png">
+                </mat-card>
+            </div>
+        </div>
+</div>
+
+
+

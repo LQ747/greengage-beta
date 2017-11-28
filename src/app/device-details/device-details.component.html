@@ -1,0 +1,19 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+  <div *ngIf="device" >
+      <mat-card>
+          <mat-card-title>{{device.msg}}</mat-card-title>
+      </mat-card>
+      <mat-list-item *ngFor="let dev of device.devices">
+       <p><b>Device Name:</b> {{dev.deviceName}}</p>
+       <hr>
+       <p><b>Version: </b>{{dev.version}}</p>
+       <p><b>Status: </b>{{dev.status}}</p>
+       <p><b>Device Details: <button [routerLink]="['/realdetails', dev.id]" >View</button></b></p>
+    </mat-list-item>
+  </div>
+  <div class="center" [hidden]="device || errmess">
+      <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+  <button mat-fab (click)="goBack()">BACK</button>
+  </div>
+  

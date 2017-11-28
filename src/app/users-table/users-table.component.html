@@ -1,0 +1,61 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-header">
+    <mat-form-field floatPlaceholder="never">
+      <input matInput #filter placeholder="Filter users">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Country Column -->
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.phone}} </mat-cell>
+    </ng-container>
+
+    <!-- Farms Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+    </ng-container>
+
+     <!-- Number Of Sensors Column -->
+     <ng-container matColumnDef="role">
+      <mat-header-cell *matHeaderCellDef> Role </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.role}} </mat-cell>
+    </ng-container>
+
+     <!-- Number of Users Column -->
+     <ng-container matColumnDef="message">
+      <mat-header-cell *matHeaderCellDef> Message </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.message}} </mat-cell>
+    </ng-container>
+
+    <!-- Admin Column -->
+    <ng-container matColumnDef="exportType">
+      <mat-header-cell *matHeaderCellDef> ExportType </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.exportType}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column 
+    <ng-container matColumnDef="progress">
+      <mat-header-cell *matHeaderCellDef> Progress </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+    </ng-container> -->
+
+     <!-- Color Column 
+    <ng-container matColumnDef="color">
+      <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+    </ng-container> -->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -1,0 +1,30 @@
+<mat-sidenav-container class="example-container primary">
+    <mat-sidenav #sidenav mode="side" class="app-sidenav boja">
+        <mat-nav-list>
+            <span><img class="logo" 
+                routerLink="/menu" 
+                routerLinkActive="active"
+                src="/assets/images/greengage.jpg">
+            </span>
+            <a mat-list-item routerLink="/users" routerLinkActive="active" ><i class="material-icons">people</i>&ensp; Users</a>
+            <a mat-list-item routerLink="/menu" routerLinkActive="active"><i class="material-icons">dashboard</i>&ensp; Dashboard</a>
+            <a mat-list-item routerLink="/companies" routerLinkActive="active"><i class="material-icons">work</i>&ensp; Companies</a>
+            <a mat-list-item routerLink="/farms" routerLinkActive="active"><i class="material-icons">store_mall_directory</i>&ensp; Farms</a>
+            <a mat-list-item routerLink="/devices" routerLinkActive="active"><i class="material-icons">router</i>&ensp; Devices</a>
+            <a mat-list-item routerLink="/events" routerLinkActive="active"><i class="material-icons">event</i>&ensp; Events</a>
+            <a mat-list-item routerLink="/settings" routerLinkActive="active"><i class="material-icons">build</i>&ensp; Settings</a>
+        </mat-nav-list>
+    </mat-sidenav>
+            <mat-toolbar class="boja">
+                <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon class="mat-24" >menu</mat-icon>
+                </button>
+            </mat-toolbar> 
+           <div class="app-content">
+                    <router-outlet></router-outlet>
+                </div>  
+           
+</mat-sidenav-container>
+<app-footer></app-footer>
+
+                
